@@ -21,124 +21,59 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.gson.Gson;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.protocol.HTTP;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,LocationListener {
+public class MapsActivity extends FragmentActivity implements Serializable,OnMapReadyCallback,LocationListener,GoogleMap.OnMarkerClickListener {
 
-    private GoogleMap mMap;
-    int PLACE_PICKER_REQUEST = 1;
-    double lat,lng;
+    private transient GoogleMap mMap;
+    public Marker marker;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
-        StrictMode.setThreadPolicy(policy);
+
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
-        try {
-            startActivityForResult(builder.build(this), PLACE_PICKER_REQUEST);
-        } catch (GooglePlayServicesRepairableException e) {
-            e.printStackTrace();
-        } catch (GooglePlayServicesNotAvailableException e) {
-            e.printStackTrace();
-        }
+
     }
 
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.setOnMarkerClickListener(this);
+        LatLng latLng1=new LatLng(25.431160,81.829420);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng1,16.0f));
+        drawMarker(latLng1);
 
-        // Add a marker in Sydney and move the camera
-        /*LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));*/
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng());
     }
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == PLACE_PICKER_REQUEST) {
-            if (resultCode == RESULT_OK) {
-                Place place = PlacePicker.getPlace(data, this);
-                String toastMsg = String.format("Place: %s", place.getName());
-                Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show();
-                LatLng query = place.getLatLng();
-                lat = query.latitude;
-                lng = query.longitude;
-                LatLng latLng=new LatLng(lat,lng);
-                drawMarker(latLng);
-                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,16.0f));
-                LatLng latLng1=new LatLng(25.431160,81.829420);
-                drawMarker(latLng1);
-//                final Intent intent = new
-//                        Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?" +
-//                        "saddr=" + lat + "," + lng + "&daddr=" + 25.431160 + "," +
-//                        81.829420));
-//                intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
-//                startActivity(intent);
-                String url=
-                        "http://maps.googleapis.com/maps/api/directions/json?origin="
-                                + lat + "," + lng +"&destination="
-                                + 25.431160 + "," + 81.829420 + "&sensor=false";
 
-                HttpResponse response = null;
-                HttpGet request;
-                AndroidHttpClient client = AndroidHttpClient.newInstance("aryan");
-
-                request = new HttpGet(url);
-                try {
-                    response = client.execute(request);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                InputStream source = null;
-                try {
-                    source = response.getEntity().getContent();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                String returnValue = buildStringIOutils(source);
-                System.out.println(returnValue);
-                try {
-                    JSONObject result = new JSONObject(returnValue);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-
-        }
-    }
-    private String buildStringIOutils(InputStream is) {
-        try {
-            return IOUtils.toString(is, "UTF-8");
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
 
     public  void drawMarker(LatLng point){
         // Creating an instance of MarkerOptions
@@ -148,7 +83,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         markerOptions.position(point);
 
         // Adding marker on the Google Map
-        mMap.addMarker(markerOptions);
+        marker = mMap.addMarker(markerOptions);
+
 
 
     }
@@ -176,4 +112,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+
+            Intent placePickerIntent = new Intent(MapsActivity.this, MyMapLocation.class);
+            startActivity(placePickerIntent);
+            return false;
+
+
+    }
 }

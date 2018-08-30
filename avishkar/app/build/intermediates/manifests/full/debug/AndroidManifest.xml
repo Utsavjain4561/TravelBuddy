@@ -29,6 +29,7 @@
         android:theme="@style/AppTheme" >
         <activity android:name="android.com.avishkar.map" >
         </activity>
+        <activity android:name="android.com.avishkar.MyMapLocation" />
 
         <meta-data
             android:name="com.google.android.gms.version"
