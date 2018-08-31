@@ -25,7 +25,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
-import com.google.gson.Gson;
+
 
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
@@ -39,7 +39,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by UTSAV JAIN on 8/30/2018.
@@ -49,7 +48,8 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
     private static final int  PLACE_PICKER_REQUEST = 1;
     public Marker marker;
     public GoogleMap map;
-    double lat,lng;
+    public double sourceLat,sourceLng, destinationLat,destinationLng;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +57,8 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
 
 
 
+        sourceLat = getIntent().getExtras().getDouble("latitiude");
+        sourceLng = getIntent().getExtras().getDouble("longitude");
 
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -84,17 +86,20 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
                 String toastMsg = String.format("Place: %s", place.getName());
                 Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show();
                 LatLng query = place.getLatLng();
-                lat = query.latitude;
-                lng = query.longitude;
-                LatLng latLng=new LatLng(lat,lng);
-                drawMarker(latLng);
-                map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,16.0f));
-                LatLng latLng1=new LatLng(25.431160,81.829420);
-                drawMarker(latLng1);
+                destinationLat = query.latitude;
+                destinationLng = query.longitude;
+
+
+                LatLng destinationLatLng=new LatLng(destinationLat,destinationLng);
+                LatLng sourceLatLng=new LatLng(sourceLat,sourceLng);
+                drawMarker(destinationLatLng);
+                drawMarker(sourceLatLng);
+                map.moveCamera(CameraUpdateFactory.newLatLngZoom(sourceLatLng,16.0f));
+
                 String url=
                         "http://maps.googleapis.com/maps/api/directions/json?origin="
-                                + lat + "," + lng +"&destination="
-                                + 25.431160 + "," + 81.829420 + "&sensor=false";
+                                + destinationLat + "," + destinationLng +"&destination="
+                                + sourceLat + "," + sourceLng + "&sensor=false";
                 makeLoacation(url);
 
 
@@ -149,7 +154,7 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
     public void makePolyLine(JSONObject result){
         try{
             JSONArray routes = result.getJSONArray("routes");
-            long distanceForSegment = routes.getJSONObject(0).getJSONArray("legs").getJSONObject(0).getJSONObject("distance").getInt("value");
+
             JSONArray steps = routes.getJSONObject(0).getJSONArray("legs")
                     .getJSONObject(0).getJSONArray("steps");
             List<LatLng> lines = new ArrayList<LatLng>();
