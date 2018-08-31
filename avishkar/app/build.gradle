@@ -35,7 +35,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.google.android.gms:play-services-places:9.2.0'
     implementation 'org.apache.httpcomponents:httpcore:4.4.1'
-    //implementation 'org.apache.httpcomponents:httpclient:4.5'
+    implementation 'com.google.code.gson:gson:2.3'
     implementation 'com.google.android.gms:play-services-maps:9.2.0'
     implementation 'org.apache.directory.studio:org.apache.commons.io:2.4'
     testImplementation 'junit:junit:4.12'

@@ -4,31 +4,26 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.net.Uri;
-import android.net.http.AndroidHttpClient;
-import android.os.AsyncTask;
 import android.os.StrictMode;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
-import com.google.android.gms.common.GooglePlayServicesRepairableException;
-import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.Polyline;
-import com.google.android.gms.maps.model.PolylineOptions;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
@@ -40,183 +35,150 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements Serializable,OnMapReadyCallback,LocationListener,GoogleMap.OnMarkerClickListener {
 
-    private GoogleMap mMap;
-    int PLACE_PICKER_REQUEST = 1;
-    double lat, lng;
+    private transient GoogleMap mMap;
+    public Marker marker;
+    ListView lv;
     LocationManager locationManager;
-    LatLng la;
-    //  Context mContext;
+    double latitude,longitude;
+    String city;
+    int j;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-
-        StrictMode.setThreadPolicy(policy);
         locationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                        != PackageManager.PERMISSION_GRANTED) {
+            Toast.makeText(this,"xyz",Toast.LENGTH_LONG).show();
             return;
         }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
                 2000,
                 1, locationListenerGPS);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 2000, 1, locationListenerGPS);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 2000, 1,
+                locationListenerGPS);
+        lv = (ListView) findViewById(R.id.lv);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
-        try {
-            startActivityForResult(builder.build(this), PLACE_PICKER_REQUEST);
-        } catch (GooglePlayServicesRepairableException e) {
-            e.printStackTrace();
-        } catch (GooglePlayServicesNotAvailableException e) {
-            e.printStackTrace();
-        }
 
     }
-    LocationListener locationListenerGPS= new LocationListener() {
+    LocationListener locationListenerGPS = new LocationListener() {
         @Override
         public void onLocationChanged(Location location) {
-            Toast.makeText(MapsActivity.this,"onlocation",Toast.LENGTH_LONG).show();
-             la= new LatLng(location.getLatitude(),location.getLongitude());
-            drawMarker(la);
+            latitude = location.getLatitude();
+            longitude = location.getLongitude();
+            mMap.clear();
+            drawMarker(new LatLng(latitude,longitude));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude,longitude),16.0f));
+            Geocoder geocoder = new Geocoder(MapsActivity.this, Locale.getDefault());
+            try {
+                List<Address>adress=geocoder.getFromLocation(latitude,longitude,1);
+                city=adress.get(0).getLocality().toLowerCase();
+                Toast.makeText(MapsActivity.this,city,Toast.LENGTH_LONG).show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+
+            String url=
+                    "https://maps.googleapis.com/maps/api/place/textsearch/json?query="+city+"+Tourist&language=en&key=AIzaSyCLAkq9FBr_0tfE4HvRGpe_g7I5i8rXYTU";
+            HttpResponse response = null;
+            HttpGet request;
+            JSONObject result = null;
+            DefaultHttpClient client = new DefaultHttpClient();
+
+            request = new HttpGet(url);
+            try {
+                response = client.execute(request);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            InputStream source = null;
+            try {
+                source = response.getEntity().getContent();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            String returnValue = buildStringIOutils(source);
+            try {
+                result = new JSONObject(returnValue);
+                JSONArray tours = result.getJSONArray("results");
+                ArrayList<Tours> list = new ArrayList<>();
+                for (int i=0;i<tours.length();i++)
+                {
+                    JSONArray place = tours.getJSONObject(i).getJSONArray("types");
+                    System.out.println(place.length());
+                    for ( j=0;j<place.length();j++)
+                    {
+                        if (place.getString(j).equals("museum") || place.getString(j).equals("establishment"))
+                        {
+                            break;
+                        }
+                    }
+                    if (j!=place.length()&&Double.parseDouble(tours.getJSONObject(i).getString("rating"))>=2.5){
+                        String placeid= tours.getJSONObject(i).getString("place_id");
+                        String address=tours.getJSONObject(i).getString("formatted_address");
+                        String link=tours.getJSONObject(i).getString("icon");
+                        String name=tours.getJSONObject(i).getString("name");
+                        double rating = Double.parseDouble(tours.getJSONObject(i).getString("rating"));
+                        String types="Tourism";
+                        Tours tours1 =new Tours(placeid,address,link,name,rating,types);
+                        list.add(tours1);}
+                    if (list.size()==3)
+                        break;
+                }
+                ArrayList<HashMap<String,String>> arrayList= new ArrayList<>();
+                for (int i=0;i<list.size();i++)
+                {
+                    HashMap<String, String> hm = new HashMap<>();
+                    hm.put("name",list.get(i).address);
+                    arrayList.add(hm);
+                }
+                String[]  s={"name"};
+                int [] t={R.id.tv};
+                if (!list.isEmpty())
+                {
+                    SimpleAdapter simpleAdapter = new SimpleAdapter(MapsActivity.this,arrayList,R.layout.activity_layout,s,t);
+                    lv.setAdapter(simpleAdapter);
+                }
+                else
+                    Toast.makeText(MapsActivity.this,"nahi",Toast.LENGTH_LONG).show();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override
         public void onStatusChanged(String s, int i, Bundle bundle) {
-            Toast.makeText(MapsActivity.this,"onstatus",Toast.LENGTH_LONG).show();
+
         }
 
         @Override
         public void onProviderEnabled(String s) {
-            Toast.makeText(MapsActivity.this,"enabled",Toast.LENGTH_LONG).show();
+
         }
 
         @Override
         public void onProviderDisabled(String s) {
-            Toast.makeText(MapsActivity.this,"disabled",Toast.LENGTH_LONG).show();
+
         }
     };
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-    }
-
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == PLACE_PICKER_REQUEST) {
-            if (resultCode == RESULT_OK) {
-                Place place = PlacePicker.getPlace(data, this);
-                String toastMsg = String.format("Place: %s", place.getName());
-                Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show();
-                LatLng query = place.getLatLng();
-                lat = query.latitude;
-                lng = query.longitude;
-                LatLng latLng = new LatLng(lat, lng);
-                drawMarker(latLng);
-                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16.0f));
-                String url=
-                        "http://maps.googleapis.com/maps/api/directions/json?origin="
-                                + lat + "," + lng +"&destination="
-                                + la.latitude + "," + la.longitude + "&sensor=false";
-
-                HttpResponse response = null;
-                HttpGet request;
-                DefaultHttpClient client = new DefaultHttpClient();
-
-                request = new HttpGet(url);
-                try {
-                    response = client.execute(request);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                InputStream source = null;
-                try {
-                    source = response.getEntity().getContent();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                String returnValue = buildStringIOutils(source);
-   //             System.out.println(returnValue);
-                try {
-                    JSONObject result = new JSONObject(returnValue);
-                    JSONArray routes = result.getJSONArray("routes");
-                    long distanceForSegment = routes.getJSONObject(0).getJSONArray("legs").getJSONObject(0).getJSONObject("distance").getInt("value");
-                    JSONArray steps = routes.getJSONObject(0).getJSONArray("legs")
-                            .getJSONObject(0).getJSONArray("steps");
-                    List<LatLng> lines = new ArrayList<LatLng>();
-                    for(int i=0; i < steps.length(); i++) {
-                        String polyline = steps.getJSONObject(i).getJSONObject("polyline").getString("points");
-
-                        for(LatLng p : decodePolyline(polyline)) {
-                            lines.add(p);
-                        }
-                    }
-                     mMap.addPolyline(new PolylineOptions().addAll(lines).width(15).color(Color.BLUE));
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-            }
-
-        }
-    }
-    private List<LatLng> decodePolyline(String encoded) {
-
-        List<LatLng> poly = new ArrayList<LatLng>();
-
-        int index = 0, len = encoded.length();
-        int lat = 0, lng = 0;
-
-        while (index < len) {
-            int b, shift = 0, result = 0;
-            do {
-                b = encoded.charAt(index++) - 63;
-                result |= (b & 0x1f) << shift;
-                shift += 5;
-            } while (b >= 0x20);
-            int dlat = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
-            lat += dlat;
-
-            shift = 0;
-            result = 0;
-            do {
-                b = encoded.charAt(index++) - 63;
-                result |= (b & 0x1f) << shift;
-                shift += 5;
-            } while (b >= 0x20);
-            int dlng = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
-            lng += dlng;
-
-            LatLng p = new LatLng((double) lat / 1E5, (double) lng / 1E5);
-            poly.add(p);
-        }
-
-        return poly;
-    }
     private String buildStringIOutils(InputStream is) {
         try {
             return IOUtils.toString(is, "UTF-8");
@@ -226,6 +188,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+        mMap.setOnMarkerClickListener(this);
+    }
+
+
     public  void drawMarker(LatLng point){
         // Creating an instance of MarkerOptions
         MarkerOptions markerOptions = new MarkerOptions();
@@ -234,7 +203,40 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         markerOptions.position(point);
 
         // Adding marker on the Google Map
-        mMap.addMarker(markerOptions);
+        marker = mMap.addMarker(markerOptions);
+
+
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        double latitude = location.getLatitude();
+        double longitude= location.getLongitude();
+        LatLng latLng = new LatLng(latitude,longitude);
+        drawMarker(latLng);
+    }
+
+    @Override
+    public void onStatusChanged(String s, int i, Bundle bundle) {
+
+    }
+
+    @Override
+    public void onProviderEnabled(String s) {
+
+    }
+
+    @Override
+    public void onProviderDisabled(String s) {
+
+    }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+
+            Intent placePickerIntent = new Intent(MapsActivity.this, MyMapLocation.class);
+            startActivity(placePickerIntent);
+            return false;
 
 
     }
