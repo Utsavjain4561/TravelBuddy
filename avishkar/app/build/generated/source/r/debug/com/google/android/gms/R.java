@@ -139,13 +139,13 @@ public final class R {
         public static final int place_autocomplete_search_input = 0x7f07005e;
         public static final int place_autocomplete_separator = 0x7f07005f;
         public static final int radio = 0x7f070062;
-        public static final int satellite = 0x7f070065;
-        public static final int standard = 0x7f070080;
-        public static final int terrain = 0x7f070085;
-        public static final int text = 0x7f070086;
-        public static final int text2 = 0x7f070087;
-        public static final int wide = 0x7f070094;
-        public static final int wrap_content = 0x7f070097;
+        public static final int satellite = 0x7f070066;
+        public static final int standard = 0x7f070081;
+        public static final int terrain = 0x7f070086;
+        public static final int text = 0x7f070087;
+        public static final int text2 = 0x7f070088;
+        public static final int wide = 0x7f070095;
+        public static final int wrap_content = 0x7f070098;
     }
     public static final class integer {
         public static final int google_play_services_version = 0x7f080004;

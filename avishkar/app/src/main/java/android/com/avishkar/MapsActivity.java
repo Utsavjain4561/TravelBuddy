@@ -13,6 +13,8 @@ import android.os.StrictMode;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -61,7 +63,16 @@ public class MapsActivity extends FragmentActivity implements Serializable,OnMap
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
                         != PackageManager.PERMISSION_GRANTED) {
             Toast.makeText(this,"xyz",Toast.LENGTH_LONG).show();
+            String[] permission =new String[1];
+            permission[0]=Manifest.permission.ACCESS_FINE_LOCATION;
+
+            ActivityCompat.requestPermissions(MapsActivity.this,permission,1);
             return;
+        }
+        else{
+
+
+
         }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
                 2000,
@@ -72,6 +83,8 @@ public class MapsActivity extends FragmentActivity implements Serializable,OnMap
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().addToBackStack(null);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -89,10 +102,11 @@ public class MapsActivity extends FragmentActivity implements Serializable,OnMap
             try {
                 List<Address>adress=geocoder.getFromLocation(latitude,longitude,1);
                 city=adress.get(0).getLocality().toLowerCase();
-                Toast.makeText(MapsActivity.this,city,Toast.LENGTH_LONG).show();
+              //  Toast.makeText(MapsActivity.this,city,Toast.LENGTH_LONG).show();
             } catch (IOException e) {
                 e.printStackTrace();
             }
+         //   Log.e("city",city);
 
 
 
@@ -123,7 +137,7 @@ public class MapsActivity extends FragmentActivity implements Serializable,OnMap
                 for (int i=0;i<tours.length();i++)
                 {
                     JSONArray place = tours.getJSONObject(i).getJSONArray("types");
-                    System.out.println(place.length());
+                   // System.out.println(place.length());
                     for ( j=0;j<place.length();j++)
                     {
                         if (place.getString(j).equals("museum") || place.getString(j).equals("establishment"))
