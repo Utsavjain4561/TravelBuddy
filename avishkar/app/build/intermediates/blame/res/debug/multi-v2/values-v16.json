@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\win\\Downloads\\TravelBuddy-utsav\\TravelBuddy-utsav\\avishkar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\win\\Documents\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
                     "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\57ee62162b8b5c13dd66164b3afb1f5c\\res\\values-v16\\values-v16.xml",

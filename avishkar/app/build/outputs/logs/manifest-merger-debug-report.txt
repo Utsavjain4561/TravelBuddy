@@ -1,15 +1,18 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:2:1-49:12
+MERGED from [com.android.support:cardview-v7:28.0.0-rc02] C:\Users\win\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0-rc02.aar\5b9cfc5419e3034a1839acf9ca573ce3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:design:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d6991a8172bc97dad97879636fb00bbb\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a689c5ea45f69c576853a0a57699d88d\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\win\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1e2b7eebe2c96bf081e7aa75bbf70a2b\AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.android.gms:play-services-places:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-places-9.2.0.aar\24d3ba0012caed56af2b2c2990e2a3c9\AndroidManifest.xml:16:1-20:12
-MERGED from [com.google.android.gms:play-services-maps:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-maps-9.2.0.aar\d0682d47b4c2c50cb24ef76be281891c\AndroidManifest.xml:16:1-28:12
+MERGED from [com.android.support:transition:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\a2492436dc7ed4f95399cbd155dc5589\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3b73fcb918eab44c2223e35a74229d23\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4eeeb303c1dedfaf54012b6cd36bc1de\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\3343ea43ba78e03c340a5deb56340b4f\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-places:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-places-9.2.0.aar\24d3ba0012caed56af2b2c2990e2a3c9\AndroidManifest.xml:16:1-20:12
+MERGED from [com.google.android.gms:play-services-maps:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-maps-9.2.0.aar\d0682d47b4c2c50cb24ef76be281891c\AndroidManifest.xml:16:1-28:12
 MERGED from [com.google.android.gms:play-services-base:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.0.aar\645f2715f3967e2306ca5c202ad7453a\AndroidManifest.xml:16:1-24:12
 MERGED from [com.google.android.gms:play-services-tasks:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.2.0.aar\e0c4aa1d6991d3f4514c3eac1ba32ba9\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-basement:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.2.0.aar\61c764181faa9d5e22fedb0242ad3e51\AndroidManifest.xml:16:1-26:12
@@ -19,52 +22,71 @@ MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\win\.gradle\ca
 MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\cfdb4290954e186cb95ae9d5a4a9dec4\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\bed7813b402d3778173094fbfa1b31a7\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57ee62162b8b5c13dd66164b3afb1f5c\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\win\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1e2b7eebe2c96bf081e7aa75bbf70a2b\AndroidManifest.xml:2:1-11:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\99f0b14c782b8c7a5cea6b9e2ae5677d\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:2:1-49:12
 	package
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:3:5-35
-		INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:4:5-35
+		INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:2:1-41:12
-		INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:2:1-49:12
+		INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:2:1-41:12
-		INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:2:1-49:12
+		INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:5:5-79
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:6:5-79
 	android:name
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:5:22-76
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:6:5-66
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:7:5-67
 MERGED from [com.google.android.gms:play-services-maps:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-maps-9.2.0.aar\d0682d47b4c2c50cb24ef76be281891c\AndroidManifest.xml:21:5-66
 MERGED from [com.google.android.gms:play-services-maps:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-maps-9.2.0.aar\d0682d47b4c2c50cb24ef76be281891c\AndroidManifest.xml:21:5-66
 	android:name
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:6:22-64
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:7:22-64
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:7:5-80
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:8:5-81
 	android:name
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:7:22-78
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:8:22-78
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:11:5-71
+	android:name
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:11:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:12:5-71
+	android:name
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:12:22-68
+uses-permission#android.permission.READ_CONTACTS
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:13:5-72
+	android:name
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:13:22-69
 application
-ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:8:5-39:19
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:15:5-47:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d6991a8172bc97dad97879636fb00bbb\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d6991a8172bc97dad97879636fb00bbb\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a689c5ea45f69c576853a0a57699d88d\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a689c5ea45f69c576853a0a57699d88d\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\win\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1e2b7eebe2c96bf081e7aa75bbf70a2b\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\win\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1e2b7eebe2c96bf081e7aa75bbf70a2b\AndroidManifest.xml:9:5-20
-MERGED from [com.google.android.gms:play-services-places:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-places-9.2.0.aar\24d3ba0012caed56af2b2c2990e2a3c9\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-places:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-places-9.2.0.aar\24d3ba0012caed56af2b2c2990e2a3c9\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-maps:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-maps-9.2.0.aar\d0682d47b4c2c50cb24ef76be281891c\AndroidManifest.xml:27:5-20
-MERGED from [com.google.android.gms:play-services-maps:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-maps-9.2.0.aar\d0682d47b4c2c50cb24ef76be281891c\AndroidManifest.xml:27:5-20
+MERGED from [com.android.support:transition:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\a2492436dc7ed4f95399cbd155dc5589\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\a2492436dc7ed4f95399cbd155dc5589\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3b73fcb918eab44c2223e35a74229d23\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3b73fcb918eab44c2223e35a74229d23\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4eeeb303c1dedfaf54012b6cd36bc1de\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4eeeb303c1dedfaf54012b6cd36bc1de\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\3343ea43ba78e03c340a5deb56340b4f\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\3343ea43ba78e03c340a5deb56340b4f\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-places:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-places-9.2.0.aar\24d3ba0012caed56af2b2c2990e2a3c9\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-places:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-places-9.2.0.aar\24d3ba0012caed56af2b2c2990e2a3c9\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-maps:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-maps-9.2.0.aar\d0682d47b4c2c50cb24ef76be281891c\AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-maps:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-maps-9.2.0.aar\d0682d47b4c2c50cb24ef76be281891c\AndroidManifest.xml:27:5-20
 MERGED from [com.google.android.gms:play-services-base:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.0.aar\645f2715f3967e2306ca5c202ad7453a\AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-base:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.0.aar\645f2715f3967e2306ca5c202ad7453a\AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-tasks:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.2.0.aar\e0c4aa1d6991d3f4514c3eac1ba32ba9\AndroidManifest.xml:5:5-20
@@ -83,74 +105,90 @@ MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\win\.gradle
 MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\bed7813b402d3778173094fbfa1b31a7\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57ee62162b8b5c13dd66164b3afb1f5c\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57ee62162b8b5c13dd66164b3afb1f5c\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\win\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1e2b7eebe2c96bf081e7aa75bbf70a2b\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\win\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1e2b7eebe2c96bf081e7aa75bbf70a2b\AndroidManifest.xml:9:5-20
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\99f0b14c782b8c7a5cea6b9e2ae5677d\AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\99f0b14c782b8c7a5cea6b9e2ae5677d\AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:20:9-35
 	android:label
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:18:9-41
 	android:roundIcon
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:19:9-54
 	android:icon
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:17:9-43
 	android:allowBackup
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:16:9-35
 	android:theme
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:14:9-40
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:21:9-40
 activity#android.com.avishkar.map
-ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:16:9-19:20
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:22:9-50
 	android:name
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:16:19-38
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:22:19-38
 activity#android.com.avishkar.MyMapLocation
-ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:20:9-50
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:23:9-51
 	android:name
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:20:19-48
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:23:19-48
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:22:9-24:69
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:25:9-27:69
 MERGED from [com.google.android.gms:play-services-basement:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.2.0.aar\61c764181faa9d5e22fedb0242ad3e51\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-basement-9.2.0.aar\61c764181faa9d5e22fedb0242ad3e51\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:24:13-66
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:27:13-66
 	android:name
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:23:13-58
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:26:13-58
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:25:9-27:71
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:28:9-30:71
 	android:value
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:27:13-68
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:30:13-68
 	android:name
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:26:13-58
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:29:13-58
 activity#android.com.avishkar.MapsActivity
-ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:29:9-37:20
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:32:9-37:20
 	android:label
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:31:13-56
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:34:13-56
+	android:theme
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:35:13-69
 	android:name
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:30:13-41
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:33:13-41
+activity#android.com.avishkar.LoginActivity
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:38:9-46:20
+	android:label
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:40:13-57
+	android:name
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:39:13-42
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:32:13-36:29
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:41:13-45:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:33:17-69
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:42:17-69
 	android:name
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:33:25-66
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:42:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:35:17-77
+ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:44:17-77
 	android:name
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml:35:27-74
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml:44:27-74
 uses-sdk
-INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:cardview-v7:28.0.0-rc02] C:\Users\win\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0-rc02.aar\5b9cfc5419e3034a1839acf9ca573ce3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0-rc02] C:\Users\win\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0-rc02.aar\5b9cfc5419e3034a1839acf9ca573ce3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d6991a8172bc97dad97879636fb00bbb\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d6991a8172bc97dad97879636fb00bbb\AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a689c5ea45f69c576853a0a57699d88d\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a689c5ea45f69c576853a0a57699d88d\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\win\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1e2b7eebe2c96bf081e7aa75bbf70a2b\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\win\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1e2b7eebe2c96bf081e7aa75bbf70a2b\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.gms:play-services-places:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-places-9.2.0.aar\24d3ba0012caed56af2b2c2990e2a3c9\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-places:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-places-9.2.0.aar\24d3ba0012caed56af2b2c2990e2a3c9\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-maps:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-maps-9.2.0.aar\d0682d47b4c2c50cb24ef76be281891c\AndroidManifest.xml:26:5-42
-MERGED from [com.google.android.gms:play-services-maps:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-maps-9.2.0.aar\d0682d47b4c2c50cb24ef76be281891c\AndroidManifest.xml:26:5-42
+MERGED from [com.android.support:transition:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\a2492436dc7ed4f95399cbd155dc5589\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\a2492436dc7ed4f95399cbd155dc5589\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3b73fcb918eab44c2223e35a74229d23\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3b73fcb918eab44c2223e35a74229d23\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4eeeb303c1dedfaf54012b6cd36bc1de\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4eeeb303c1dedfaf54012b6cd36bc1de\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\3343ea43ba78e03c340a5deb56340b4f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\3343ea43ba78e03c340a5deb56340b4f\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-places-9.2.0.aar\24d3ba0012caed56af2b2c2990e2a3c9\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-places:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-places-9.2.0.aar\24d3ba0012caed56af2b2c2990e2a3c9\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-maps:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-maps-9.2.0.aar\d0682d47b4c2c50cb24ef76be281891c\AndroidManifest.xml:26:5-42
+MERGED from [com.google.android.gms:play-services-maps:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-maps-9.2.0.aar\d0682d47b4c2c50cb24ef76be281891c\AndroidManifest.xml:26:5-42
 MERGED from [com.google.android.gms:play-services-base:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.0.aar\645f2715f3967e2306ca5c202ad7453a\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-base:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-base-9.2.0.aar\645f2715f3967e2306ca5c202ad7453a\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-tasks:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-tasks-9.2.0.aar\e0c4aa1d6991d3f4514c3eac1ba32ba9\AndroidManifest.xml:4:5-43
@@ -169,26 +207,34 @@ MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\win\.gradle
 MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\bed7813b402d3778173094fbfa1b31a7\AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57ee62162b8b5c13dd66164b3afb1f5c\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57ee62162b8b5c13dd66164b3afb1f5c\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\win\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1e2b7eebe2c96bf081e7aa75bbf70a2b\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\win\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1e2b7eebe2c96bf081e7aa75bbf70a2b\AndroidManifest.xml:5:5-7:41
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\99f0b14c782b8c7a5cea6b9e2ae5677d\AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\99f0b14c782b8c7a5cea6b9e2ae5677d\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a689c5ea45f69c576853a0a57699d88d\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:design:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d6991a8172bc97dad97879636fb00bbb\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\win\Downloads\TravelBuddy-utsav\TravelBuddy-utsav\avishkar\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\win\Documents\TravelBuddy-branch1\avishkar\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a689c5ea45f69c576853a0a57699d88d\AndroidManifest.xml:26:9-28:38
+ADDED from [com.android.support:design:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d6991a8172bc97dad97879636fb00bbb\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a689c5ea45f69c576853a0a57699d88d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a689c5ea45f69c576853a0a57699d88d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\a2492436dc7ed4f95399cbd155dc5589\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\a2492436dc7ed4f95399cbd155dc5589\AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3b73fcb918eab44c2223e35a74229d23\AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3b73fcb918eab44c2223e35a74229d23\AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4eeeb303c1dedfaf54012b6cd36bc1de\AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\4eeeb303c1dedfaf54012b6cd36bc1de\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\3343ea43ba78e03c340a5deb56340b4f\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\3343ea43ba78e03c340a5deb56340b4f\AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\72661371289f533a4723b182ea654765\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\72661371289f533a4723b182ea654765\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\f15ce04c22ff1d81d0a460c2316d219b\AndroidManifest.xml:26:9-28:38
@@ -202,9 +248,9 @@ MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\win\.gradle
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57ee62162b8b5c13dd66164b3afb1f5c\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\57ee62162b8b5c13dd66164b3afb1f5c\AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a689c5ea45f69c576853a0a57699d88d\AndroidManifest.xml:28:13-35
+		ADDED from [com.android.support:design:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d6991a8172bc97dad97879636fb00bbb\AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\a689c5ea45f69c576853a0a57699d88d\AndroidManifest.xml:27:13-51
+		ADDED from [com.android.support:design:26.1.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d6991a8172bc97dad97879636fb00bbb\AndroidManifest.xml:27:13-51
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.gms:play-services-maps:9.2.0] C:\Users\win\.gradle\caches\transforms-1\files-1.1\play-services-maps-9.2.0.aar\d0682d47b4c2c50cb24ef76be281891c\AndroidManifest.xml:20:5-78
 	android:name

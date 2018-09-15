@@ -16,7 +16,7 @@ public class MyLocation extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.my_location,container,false);
+        View view = inflater.inflate(R.layout.map_info,container,false);
         TextView location = view.findViewById(R.id.my_location);
         return view;
     }
