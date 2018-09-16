@@ -19,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".map"></activity>
+        <activity android:name=".map" />
         <activity android:name=".MyMapLocation" />
 
         <meta-data
@@ -32,12 +32,12 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login">
+        </activity>
+        <activity android:name=".Firebase">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

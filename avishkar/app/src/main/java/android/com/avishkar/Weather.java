@@ -4,7 +4,7 @@ package android.com.avishkar;
  * Created by lokesh on 1/9/18.
  */
 
-class weather{
+public class Weather{
     public String city;
     public String type;
     public String description;
@@ -12,7 +12,7 @@ class weather{
     public double humidity;
     public double wind;
 
-    weather(String city,String type,String description,double temperature,double humidity,double wind){
+    Weather(String city,String type,String description,double temperature,double humidity,double wind){
         this.city = city;
         this.type = type;
         this.temperature = temperature;
