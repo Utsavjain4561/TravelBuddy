@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "296397114320-ff1a3de6j7kb9l9rm4vg61b2m2vm90n7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "android.com.avishkar",
+            "certificate_hash": "238d1e8b36bd1b17b6ac3e1d1ef6f77b4ea4a7df"
+          }
+        },
+        {
           "client_id": "296397114320-jfk9dnk77n4n98tda8gkr338fj31f7i6.apps.googleusercontent.com",
           "client_type": 3
         }

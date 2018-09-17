@@ -4,7 +4,7 @@ package android.com.avishkar;
  * Created by lokesh on 1/9/18.
  */
 
-public class Weather{
+class Weather{
     public String city;
     public String type;
     public String description;
