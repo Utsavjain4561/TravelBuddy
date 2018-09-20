@@ -49,7 +49,7 @@ public class PresentTrip extends AppCompatActivity {
         FirebaseDatabase database=FirebaseDatabase.getInstance();
         DatabaseReference myRef=database.getReference();
         email=getIntent().getExtras().getString("email");
-        myRef.child("users").child(email).child("ongoingTrip").addListenerForSingleValueEvent(new ValueEventListener() {
+        myRef.child("users").child(email).child("ongoingTrip").child("current").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 CurrentTour currtour=dataSnapshot.getValue(CurrentTour.class);

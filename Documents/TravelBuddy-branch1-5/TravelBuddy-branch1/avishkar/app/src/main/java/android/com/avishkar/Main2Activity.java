@@ -169,7 +169,7 @@ public class Main2Activity extends AppCompatActivity {
                         Intent intent = new Intent (Main2Activity.this,MapsActivity.class);
 
                         //change it at time of merging
-                        Intent temp=new Intent(Main2Activity.this,Temp.class);
+                        Intent temp=new Intent(Main2Activity.this,Dashboard.class);
                         red_em=parse(memail.getText().toString().trim());
                         temp.putExtra("email",red_em);
                         startActivity(temp);

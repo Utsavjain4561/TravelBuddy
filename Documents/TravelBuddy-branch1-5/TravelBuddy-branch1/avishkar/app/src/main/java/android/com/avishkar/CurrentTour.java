@@ -14,18 +14,18 @@ import static com.google.android.gms.internal.zzbgp.NULL;
 public class CurrentTour {
     public Date startDate;
     public String title,source,destination;
-    public int tripDuration,budget;
+    public String tripDuration,budget;
     public boolean state;
     ArrayList<Days> days;
 
     CurrentTour(){
         startDate=new Date();
         title=destination=source=NULL;
-        tripDuration=budget=0;
+        tripDuration=budget=NULL;
         state=false;
         days=new ArrayList<>();
     }
-    CurrentTour(String title,String source,String destination,boolean state,ArrayList<Days>days1,int tripDuration,int budget){
+    CurrentTour(String title,String source,String destination,boolean state,ArrayList<Days>days1,String tripDuration,String budget){
         this.title=title;
         this.source=source;
         this.destination=destination;

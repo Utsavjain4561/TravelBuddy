@@ -61,7 +61,7 @@ public class DaysAdapter extends RecyclerView.Adapter<DaysAdapter.RecyclerViewHo
                 current.expenses=y;
                 //save data on firebase
                 FirebaseDatabase database=FirebaseDatabase.getInstance();
-                final DatabaseReference myRef=database.getReference().child("users").child(memail).child("ongoingTrip");
+                final DatabaseReference myRef=database.getReference().child("users").child(memail).child("ongoingTrip").child("current");
                 myRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {

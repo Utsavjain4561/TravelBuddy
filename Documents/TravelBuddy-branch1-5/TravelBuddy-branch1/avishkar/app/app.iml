@@ -51,13 +51,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/assets" type="java-test-resource" />
@@ -65,6 +58,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/assets" type="java-resource" />
@@ -118,8 +118,10 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="com.android.support:animated-vector-drawable-27.0.2" level="project" />
     <orderEntry type="library" name="com.android.support:recyclerview-v7-26.1.0" level="project" />
+    <orderEntry type="library" name="de.hdodenhof:circleimageview-2.2.0" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-common-12.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="com.squareup:javawriter:2.1.1@jar" level="project" />
+    <orderEntry type="library" name="com.google.firebase:firebase-storage-license-12.0.1" level="project" />
     <orderEntry type="library" name="com.parse.bolts:bolts-tasks:1.4.0@jar" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-auth-12.0.1" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-base-license-12.0.1" level="project" />
@@ -153,6 +155,7 @@
     <orderEntry type="library" scope="TEST" name="net.sf.kxml:kxml2:2.3.0@jar" level="project" />
     <orderEntry type="library" name="com.squareup.picasso:picasso:2.5.2@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-fragment-27.0.2" level="project" />
+    <orderEntry type="library" name="com.google.firebase:firebase-storage-12.0.1" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-places-license-12.0.1" level="project" />
     <orderEntry type="library" name="com.android.support:transition-26.1.0" level="project" />
     <orderEntry type="library" name="com.android.support:design-26.1.0" level="project" />
@@ -164,6 +167,7 @@
     <orderEntry type="library" name="com.google.android.gms:play-services-tasks-12.0.1" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-database-connection-12.0.1" level="project" />
     <orderEntry type="library" name="org.apache.httpcomponents:httpcore:4.4.1@jar" level="project" />
+    <orderEntry type="library" name="com.google.firebase:firebase-storage-common-license-12.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test.espresso:espresso-core-3.0.1" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-basement-12.0.1" level="project" />
     <orderEntry type="library" name="org.apache.directory.studio:org.apache.commons.io:2.4@jar" level="project" />
@@ -189,6 +193,7 @@
     <orderEntry type="library" name="com.google.firebase:firebase-analytics-impl-license-12.0.1" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-auth-base-12.0.1" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-tasks-license-12.0.1" level="project" />
+    <orderEntry type="library" name="com.google.firebase:firebase-storage-common-12.0.1" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-database-license-12.0.1" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-iid-license-12.0.1" level="project" />
     <orderEntry type="library" name="org.apache.http.legacy-android-26" level="project" />

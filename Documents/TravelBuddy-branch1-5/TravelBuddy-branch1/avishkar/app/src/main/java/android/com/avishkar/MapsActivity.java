@@ -14,6 +14,7 @@ import android.os.AsyncTask;
 import android.os.StrictMode;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -24,6 +25,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.ToolbarWidgetWrapper;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -78,6 +81,7 @@ public class MapsActivity extends AppCompatActivity implements Serializable, OnM
     private RecyclerView mRecyclerView;
     private CardAdapter mAdapter;
     ArrayList<Tours> list;
+    private FloatingActionButton gotodrawer;
     LocationManager locationManager;
     double latitude, longitude;
     String city;
@@ -97,6 +101,14 @@ public class MapsActivity extends AppCompatActivity implements Serializable, OnM
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         locationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
 
+        gotodrawer= (FloatingActionButton) findViewById(R.id.appbar);
+        gotodrawer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent drawer=new Intent(MapsActivity.this,Dashboard.class);
+                startActivity(drawer);
+            }
+        });
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
