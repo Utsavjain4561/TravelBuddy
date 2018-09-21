@@ -81,35 +81,28 @@
 
     <RelativeLayout
         android:id="@+id/login_scheme"
-        android:layout_width="253dp"
-        android:layout_height="72dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="30dp"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
         android:orientation="horizontal"
         tools:ignore="InvalidId">
-
         <com.facebook.login.widget.LoginButton
             android:id="@+id/fblogin"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="center_horizontal"
-            android:paddingLeft="40dp">
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="Login">
 
         </com.facebook.login.widget.LoginButton>
-
-        <Button
-            android:id="@+id/goologin"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"></Button>
-        <!--<com.google.android.gms.common.SignInButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/goologin"-->
-        <!--android:layout_toLeftOf="@id/fblogin">-->
-        <!--</com.google.android.gms.common.SignInButton>-->
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/goologin"-->
+            <!--android:layout_alignLeft="@id/fblogin"-->
+            <!--android:text="login"/>-->
     </RelativeLayout>
 </RelativeLayout>

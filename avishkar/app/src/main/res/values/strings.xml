@@ -2,6 +2,8 @@
     <string name="app_name">avishkar</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="navigation_draw_open">Open navigation drawer</string>
+    <string name="navigation_draw_close">Close navigation drawer</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>

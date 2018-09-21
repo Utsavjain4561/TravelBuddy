@@ -1,16 +1,11 @@
 package android.com.avishkar;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.TextView;
-
-/**
- * Created by Ahmad AbuKashef on 2/26/2017.
- */
 
 public class VerticalTextView extends TextView {
     final boolean topDown;

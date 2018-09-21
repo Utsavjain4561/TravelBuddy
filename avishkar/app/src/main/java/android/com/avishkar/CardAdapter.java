@@ -84,20 +84,15 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.RecyclerViewHo
     public int getItemCount() {
         return mTours.size();
     }
-
     public class RecyclerViewHolder extends RecyclerView.ViewHolder{
-//        public TextView textViewName;
-//        public ImageView imageView;
 
         public TextView place,title,address,opening,latitude,longitude;
         ImageView iv,temp,draw;
         LinearLayout lv;
         RatingBar ratings;
 
-
         public RecyclerViewHolder(View itemView) {
             super(itemView);
-
             title=itemView.findViewById(R.id.title);
             place=itemView.findViewById(R.id.place);
             address=itemView.findViewById(R.id.address);
@@ -109,8 +104,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.RecyclerViewHo
             iv=itemView.findViewById(R.id.cloud); 
             draw=itemView.findViewById(R.id.thermo);
             lv=(LinearLayout) itemView.findViewById(R.id.card);
-//            textViewName=itemView.findViewById(R.id.text_view_name);
-//            imageView=itemView.findViewById(R.id.image_view_upload);
         }
     }
 }

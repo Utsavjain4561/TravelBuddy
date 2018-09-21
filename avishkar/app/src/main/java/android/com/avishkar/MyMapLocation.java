@@ -81,13 +81,6 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
         mapFragment.getMapAsync(this);
         locationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return;
         }
         PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
@@ -114,7 +107,6 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
                 LatLng latLng=new LatLng(latitude,longitude);
                 drawMarker(latLng);
                 drawMarker(new LatLng(lat,lng));
-               // Toast.makeText(this,"activity result",Toast.LENGTH_LONG).show();
                 String url=
                     "http://maps.googleapis.com/maps/api/directions/json?origin="
                             + lat + "," + lng +"&destination="
@@ -165,7 +157,6 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
         HttpResponse response = null;
         HttpGet request;
         JSONObject result = null;
-     //  Toast.makeText(this,"make location",Toast.LENGTH_LONG).show();
         DefaultHttpClient client = new DefaultHttpClient();
 
         request = new HttpGet(url);
@@ -191,7 +182,6 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
         return result;
     }
     public void makePolyLine(JSONObject result){
-     //   Toast.makeText(this,"polyline",Toast.LENGTH_LONG).show();
         try{
             JSONArray routes = result.getJSONArray("routes");
             long distanceForSegment = routes.getJSONObject(0).getJSONArray("legs").getJSONObject(0).getJSONObject("distance").getInt("value");

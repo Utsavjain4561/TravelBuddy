@@ -34,6 +34,7 @@
     <uses-permission android:name="android.com.avishkar.permission.C2D_MESSAGE" />
 
     <application
+        android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
@@ -42,8 +43,19 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <service
+            android:name="android.com.avishkar.MapsActivity$LocationService"
+            android:label=".MapsActivity$LocationService" />
+
         <activity android:name="android.com.avishkar.map" />
         <activity android:name="android.com.avishkar.MyMapLocation" />
+        <activity android:name="android.com.avishkar.Splash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -60,7 +72,7 @@
             android:label="@string/title_activity_maps"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name="android.com.avishkar.LoginActivity"
+            android:name="android.com.avishkar.Temp"
             android:label="@string/title_activity_login" />
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -79,13 +91,10 @@
                 <data android:scheme="fb418717225322021" />
             </intent-filter>
         </activity>
-        <activity android:name="android.com.avishkar.Main2Activity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name="android.com.avishkar.Dashboard" />
+        <activity android:name="android.com.avishkar.Main2Activity" />
+        <activity android:name="android.com.avishkar.PresentTrip" />
+        <activity android:name="android.com.avishkar.Profile" />
         <activity android:name="com.facebook.CustomTabMainActivity" />
 
         <meta-data
@@ -134,6 +143,18 @@
             android:launchMode="singleInstance"
             android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+             FirebaseMessagingService performs security checks at runtime,
+             no need for explicit permissions despite exported="true"
+        -->
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

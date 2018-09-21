@@ -35,6 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Place"
+                android:textColor="@android:color/black"
                 android:layout_marginLeft="28dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -59,10 +60,11 @@
                 android:layout_gravity="center"
                 android:id="@+id/humi"
                 android:layout_weight="0.05"/>
-            <EditText
+            <TextView
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text="Address"
+                android:textColor="@android:color/black"
                 android:inputType="textMultiLine"
                 android:layout_marginLeft="8dp"
                 android:id="@+id/address"
