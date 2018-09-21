@@ -89,6 +89,7 @@
         android:src="@drawable/ic_launcher_background"
         app:backgroundTint="#279AF1"
         app:fabSize="normal"
+        android:id="@+id/floatingbutton"
         app:layout_anchor="@+id/appbar"
         app:layout_anchorGravity="bottom|right|end"/>
 

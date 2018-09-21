@@ -2,16 +2,15 @@ package android.com.avishkar;
 
 import android.support.annotation.NonNull;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
-
-import static com.google.android.gms.internal.zzbgp.NULL;
 
 /**
  * Created by lokesh on 18/9/18.
  */
 
-public class CurrentTour {
+public class CurrentTour implements Serializable {
     public Date startDate;
     public String title,source,destination;
     public String tripDuration,budget;
@@ -20,8 +19,8 @@ public class CurrentTour {
 
     CurrentTour(){
         startDate=new Date();
-        title=destination=source=NULL;
-        tripDuration=budget=NULL;
+        title=destination=source="";
+        tripDuration=budget="";
         state=false;
         days=new ArrayList<>();
     }

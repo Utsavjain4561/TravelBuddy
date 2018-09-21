@@ -46,6 +46,7 @@ public class Temp extends AppCompatActivity {
                 myRef.child("users").child(email).child("ongoingTrip").child("current").setValue(currentTour);
                 Intent temp=new Intent(Temp.this,PresentTrip.class);
                 temp.putExtra("email",email);
+                temp.putExtra("topresenttrip",currentTour);
                 startActivity(temp);
                 finish();
             }

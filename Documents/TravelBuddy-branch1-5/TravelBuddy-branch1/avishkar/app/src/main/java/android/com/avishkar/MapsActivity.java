@@ -101,11 +101,12 @@ public class MapsActivity extends AppCompatActivity implements Serializable, OnM
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         locationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
 
-        gotodrawer= (FloatingActionButton) findViewById(R.id.appbar);
+        gotodrawer= (FloatingActionButton) findViewById(R.id.floatingbutton);
         gotodrawer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent drawer=new Intent(MapsActivity.this,Dashboard.class);
+                drawer.putExtra("email",getIntent().getExtras().getString("email"));
                 startActivity(drawer);
             }
         });

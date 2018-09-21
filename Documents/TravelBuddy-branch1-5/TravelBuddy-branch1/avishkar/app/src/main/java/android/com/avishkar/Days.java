@@ -1,5 +1,6 @@
 package android.com.avishkar;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import static com.google.android.gms.internal.zzbgp.NULL;
@@ -8,7 +9,7 @@ import static com.google.android.gms.internal.zzbgp.NULL;
  * Created by lokesh on 18/9/18.
  */
 
-public class Days {
+public class Days implements Serializable{
     public String description;
     public String url;
     boolean editable;

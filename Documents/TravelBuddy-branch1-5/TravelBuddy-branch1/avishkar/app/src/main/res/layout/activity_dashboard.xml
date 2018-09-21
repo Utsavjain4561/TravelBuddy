@@ -32,6 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="#263238"
         android:padding="20dp"
         android:fitsSystemWindows="true"
 
@@ -43,7 +44,7 @@
             android:orientation="vertical" android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="8dp"
-            android:background="@color/colorAccent"
+            android:background="#263238"
             android:fitsSystemWindows="true"
             android:weightSum="3"
 
@@ -54,96 +55,221 @@
                 android:layout_height="0dp"
                 android:id="@+id/layout1"
                 android:layout_weight="1"
-                android:padding="10dp"
+
                 android:weightSum="1"
                 android:orientation="horizontal">
-                <ImageView
+                <LinearLayout
                     android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+
+                    android:weightSum="1"
+                    android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
                     android:id="@+id/trips"
+                    android:background="@color/colorYellow"
+                    android:onClick="tripClick"
+                    android:src="@drawable/ic_trip"
+                    android:scaleType="centerInside"
+                    android:layout_weight="0.7"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="0dp"
+                    />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"
+                        android:text="My Trips"
+                        android:textStyle="bold"
+
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:background="@color/colorYellow"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05"></LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.55"
+                    android:weightSum="1"
+                    android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/profile"
+                    android:scaleType="centerInside"
 
                     android:layout_gravity="center_horizontal"
-                    android:onClick="tripClick"
-                    app:srcCompat="@drawable/ic_phone_android_black_24dp"
-                    android:background="@color/profile"
-
-                    android:layout_height="match_parent"
-
-
-                    android:layout_weight="0.4"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:id="@+id/profile"
-
-                    android:layout_gravity="center"
                     android:onClick="profileClick"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_phone_android_black_24dp"
-                    android:background="@color/profile"
-                    android:layout_weight="0.6"/>
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/ic_profile"
+                    android:background="@color/colorRed"
+                    android:layout_weight="0.7"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"
+                        android:text="Profile"
+                        android:textStyle="bold"
+
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:background="@color/colorRed"/>
+                </LinearLayout>
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:id="@+id/layout2"
                 android:layout_weight="1"
-                android:padding="10dp"
+
                 android:weightSum="1"
                 android:orientation="horizontal">
-                <ImageView
+                <LinearLayout
                     android:layout_width="0dp"
-                    android:id="@+id/settings"
-
-                    android:layout_gravity="center"
                     android:layout_height="match_parent"
-                    android:onClick="settingsClick"
-                    app:srcCompat="@drawable/ic_phone_android_black_24dp"
-                    android:background="@color/profile"
-                    android:layout_weight="0.6"/>
-                <ImageView
+                    android:layout_weight="0.55"
+
+                    android:weightSum="1"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/settings"
+                        android:background="@color/colorBlue"
+                        android:onClick="settingsClick"
+                        android:src="@drawable/ic_settings"
+                        android:scaleType="centerInside"
+                        android:layout_weight="0.7"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="0dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"
+                        android:text="Settings"
+                        android:textStyle="bold"
+
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:background="@color/colorBlue"/>
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="0dp"
-                    android:id="@+id/share"
-                    android:layout_gravity="center"
-                    android:onClick="shareClick"
-                    android:src="@drawable/ic_email_black_24dp"
-
                     android:layout_height="match_parent"
-                    android:background="@color/profile"
-                    android:layout_weight="0.4"/>
+                    android:layout_weight="0.05"></LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:weightSum="1"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/share"
+                        android:scaleType="centerInside"
+
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="shareClick"
+                        android:layout_height="0dp"
+                        android:src="@drawable/ic_share"
+                        android:background="@color/colorGreen"
+                        android:layout_weight="0.7"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"
+                        android:text="Share"
+                        android:textStyle="bold"
+
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:background="@color/colorGreen"/>
+                </LinearLayout>
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:id="@+id/layout3"
-                android:padding="10dp"
+                android:layout_weight="1"
+
                 android:weightSum="1"
                 android:orientation="horizontal">
-                <ImageView
+                <LinearLayout
                     android:layout_width="0dp"
-                    android:id="@+id/home"
-                    android:layout_gravity="center"
-                    android:onClick="homeClick"
-                    app:srcCompat="@drawable/ic_phone_android_black_24dp"
-                    android:background="@color/profile"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
 
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.4"/>
-                <ImageView
+                    android:weightSum="1"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/home"
+                        android:background="@color/colorMajenta"
+                        android:onClick="homeClick"
+                        android:src="@drawable/ic_home"
+                        android:scaleType="centerInside"
+                        android:layout_weight="0.7"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="0dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"
+                        android:text="Home"
+                        android:textStyle="bold"
+
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:background="@color/colorMajenta"/>
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="0dp"
-                    android:id="@+id/explore
-"
-                    android:layout_gravity="center"
-                    android:onClick="exploreClick"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_phone_android_black_24dp"
-                    android:background="@color/colorAccentTrans"
-                    android:layout_weight="0.6"/>
+                    android:layout_weight="0.05"></LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.55"
+                    android:weightSum="1"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/explore"
+                        android:scaleType="centerInside"
+
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="exploreClick"
+                        android:layout_height="0dp"
+                        android:src="@drawable/ic_power_settings_new_black_24dp"
+                        android:background="@color/colorAccentTrans"
+                        android:layout_weight="0.7"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"
+                        android:text="Log Out"
+                        android:textStyle="bold"
+
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:background="@color/colorAccentTrans"/>
+                </LinearLayout>
 
             </LinearLayout>
+
 
         </LinearLayout>
     </android.support.design.widget.NavigationView>
