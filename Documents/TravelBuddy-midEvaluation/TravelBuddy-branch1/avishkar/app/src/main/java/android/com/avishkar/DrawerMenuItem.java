@@ -2,6 +2,7 @@ package android.com.avishkar;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,7 +24,7 @@ import com.mindorks.placeholderview.annotations.View;
 public class DrawerMenuItem {
 
     public static final int DRAWER_MENU_ITEM_PROFILE = 1;
-    public static final int DRAWER_MENU_ITEM_ASSIGNMENTS = 2;
+    public static final int DRAWER_MENU_ITEM_TRAVEL = 2;
     public static final int DRAWER_MENU_ITEM_PROJECTS = 3;
     public static final int DRAWER_MENU_ITEM_SHARE = 4;
     public static final int DRAWER_MENU_ITEM_NOTIFICATIONS = 5;
@@ -42,21 +43,25 @@ public class DrawerMenuItem {
     private ImageView itemIcon;
 
     private String memail;
+    private String mcity;
 
-    public DrawerMenuItem(Context context, int menuPosition, String email) {
-        memail=email;
+    public DrawerMenuItem(Context context, int menuPosition, String city) {
+        if(city==null)
+            city="Allahabad";
+        mcity = city;
         mContext = context;
         mMenuPosition = menuPosition;
     }
+
     @Resolve
     private void onResolved() {
-        switch (mMenuPosition){
+        switch (mMenuPosition) {
             case DRAWER_MENU_ITEM_PROFILE:
                 itemNameTxt.setText("Profile");
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_email_black_24dp));
                 break;
-            case DRAWER_MENU_ITEM_ASSIGNMENTS:
-                itemNameTxt.setText("Assignments");
+            case DRAWER_MENU_ITEM_TRAVEL:
+                itemNameTxt.setText("Travel");
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_add_black_24dp));
                 break;
             case DRAWER_MENU_ITEM_PROJECTS:
@@ -87,63 +92,45 @@ public class DrawerMenuItem {
     }
 
     @Click(R.id.mainView)
-    private void onMenuItemClick(){
-        switch (mMenuPosition){
+    private void onMenuItemClick() {
+        switch (mMenuPosition) {
             case DRAWER_MENU_ITEM_PROFILE:
-                //Toast.makeText(mContext, "Profile", Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(mContext,Profile.class);
-
-                intent.putExtra("key",memail);
-                //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
-                mContext.startActivity(intent);
-
-                if(mCallBack != null)mCallBack.onProfileMenuSelected();
+                Intent profileIntent = new Intent(mContext, Profile.class);
+                profileIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mContext.startActivity(profileIntent);
+                if (mCallBack != null) mCallBack.onProfileMenuSelected();
                 break;
-            case DRAWER_MENU_ITEM_ASSIGNMENTS:
-                //Toast.makeText(mContext, "Assignments", Toast.LENGTH_SHORT).show();
-//                Intent intentAssign=new Intent(mContext,Assignments.class);
-//                intentAssign.putExtra("key",memail);
-//                intentAssign.putExtra("title","assignments");
-                //intentAssign.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
-//                mContext.startActivity(intentAssign);
-
-                if(mCallBack != null)mCallBack.onRequestMenuSelected();
+            case DRAWER_MENU_ITEM_TRAVEL:
+                Toast.makeText(mContext, "Travel", Toast.LENGTH_SHORT).show();
+                Intent inten = new Intent(mContext, Features.class);
+                Log.e("DrawerMenu", String.valueOf(mcity));
+                inten.putExtra("city", mcity);
+                inten.putExtra("feature", 1);
+                inten.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mContext.startActivity(inten);
+                if (mCallBack != null) mCallBack.onTravelMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_PROJECTS:
-                //Toast.makeText(mContext, "Projects", Toast.LENGTH_SHORT).show();
-//                Intent intentproj=new Intent(mContext,Assignments.class);
-//                intentproj.putExtra("key",memail);
-//                intentproj.putExtra("title","projects");
-//                //intentproj.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
-//                mContext.startActivity(intentproj);
-//                if(mCallBack != null)mCallBack.onPROJECTSMenuSelected();
+
                 break;
             case DRAWER_MENU_ITEM_SHARE:
                 Toast.makeText(mContext, "Share", Toast.LENGTH_SHORT).show();
-                if(mCallBack != null)mCallBack.onSHAREMenuSelected();
+                if (mCallBack != null) mCallBack.onSHAREMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_NOTIFICATIONS:
                 Toast.makeText(mContext, "Notifications", Toast.LENGTH_SHORT).show();
-                if(mCallBack != null)mCallBack.onNotificationsMenuSelected();
+                if (mCallBack != null) mCallBack.onNotificationsMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_SETTINGS:
                 Toast.makeText(mContext, "Settings", Toast.LENGTH_SHORT).show();
-                if(mCallBack != null)mCallBack.onSettingsMenuSelected();
+                if (mCallBack != null) mCallBack.onSettingsMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_TERMS:
-                //Toast.makeText(mContext, "Developers", Toast.LENGTH_SHORT).show();
-//                Intent temp=new Intent(mContext,About.class);
-//                //temp.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
-//                mContext.startActivity(temp);
-                if(mCallBack != null)mCallBack.onTermsMenuSelected();
+
+                if (mCallBack != null) mCallBack.onTermsMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_LOGOUT:
-                Toast.makeText(mContext, "Logout", Toast.LENGTH_SHORT).show();
-//                if(mCallBack != null)mCallBack.onLogoutMenuSelected();
-//                FirebaseAuth.getInstance().signOut();
-//                Intent intent1=new Intent(mContext,Login.class);
-                //intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                mContext.startActivity(intent1);
+
                 break;
         }
     }
@@ -152,14 +139,22 @@ public class DrawerMenuItem {
         mCallBack = callBack;
     }
 
-    public interface DrawerCallBack{
+    public interface DrawerCallBack {
         void onProfileMenuSelected();
-        void onRequestMenuSelected();
+
+        void onTravelMenuSelected();
+
         void onPROJECTSMenuSelected();
+
         void onSHAREMenuSelected();
+
         void onNotificationsMenuSelected();
+
         void onSettingsMenuSelected();
+
         void onTermsMenuSelected();
+
         void onLogoutMenuSelected();
+
     }
 }

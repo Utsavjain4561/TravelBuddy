@@ -69,7 +69,11 @@ public class Dashboard extends AppCompatActivity  {
 
     public void homeClick(View view) {
         Toast.makeText(Dashboard.this,"Home",Toast.LENGTH_SHORT).show();
+        Intent homeIntent = new Intent(Dashboard.this,Home.class);
+        homeIntent.putExtra("id",1);
+        homeIntent.putExtra("email",signinemail);
         mDrawerLayout.closeDrawer(GravityCompat.START);
+        startActivity(homeIntent);
     }
 
     public void shareClick(View view) {

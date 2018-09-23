@@ -3,6 +3,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,8 +27,7 @@ public class Drawerheader {
     @View(R.id.nameTxt)
     private TextView nameTxt;
 
-    @View(R.id.emailTxt)
-    private TextView emailTxt;
+
 
     @View(R.id.weather)
     private Button weather;
@@ -50,6 +50,8 @@ public class Drawerheader {
             @Override
             public void onClick(android.view.View view) {
                 Toast.makeText(mContext,"Weather",Toast.LENGTH_LONG).show();
+                Log.e("Weather",mContext.toString());
+
 
                 Intent featuresIntent = new Intent(mContext,Features.class);
                 if(mLatLng==null){
@@ -60,7 +62,7 @@ public class Drawerheader {
                 featuresIntent.putExtra("latitude",lat);
                 featuresIntent.putExtra("longitude",lon);
                 featuresIntent.putExtra("feature",0);
-
+                featuresIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(featuresIntent);
             }
         });

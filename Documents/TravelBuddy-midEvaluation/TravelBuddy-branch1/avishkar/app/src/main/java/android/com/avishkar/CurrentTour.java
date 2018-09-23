@@ -13,8 +13,9 @@ import java.util.Date;
 public class CurrentTour implements Serializable {
     public Date startDate;
     public String title,source,destination;
-    public String tripDuration,budget;
     public boolean state;
+    public String tripDuration,budget;
+    public String itirenary;
     public ArrayList<Days> days;
 
     CurrentTour(){
@@ -24,7 +25,8 @@ public class CurrentTour implements Serializable {
         state=false;
         days=new ArrayList<>();
     }
-    CurrentTour(String title,String source,String destination,boolean state,ArrayList<Days>days1,String tripDuration,String budget){
+    CurrentTour(String title,String source,String destination,boolean state,ArrayList<Days>days1,
+                String tripDuration,String budget,String itirenary){
         this.title=title;
         this.source=source;
         this.destination=destination;
@@ -33,5 +35,6 @@ public class CurrentTour implements Serializable {
         this.tripDuration=tripDuration;
         this.budget=budget;
         this.startDate=new Date();
+        this.itirenary = itirenary;
     }
 }

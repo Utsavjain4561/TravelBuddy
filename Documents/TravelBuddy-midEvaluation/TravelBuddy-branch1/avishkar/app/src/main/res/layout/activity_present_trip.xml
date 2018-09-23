@@ -134,12 +134,31 @@
                 android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
-
-    <android.support.design.widget.FloatingActionButton
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/ic_add_black_24dp"
-        android:id="@+id/addDay"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical">
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+
+            android:src="@drawable/ic_note_add_black_24dp"
+            android:id="@+id/addItems"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/addDay"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/addItems"
+
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_add_black_24dp" />
+    </LinearLayout>
 </RelativeLayout>

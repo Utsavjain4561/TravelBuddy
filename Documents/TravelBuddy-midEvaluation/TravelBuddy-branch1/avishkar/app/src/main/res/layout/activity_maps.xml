@@ -2,8 +2,8 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/listbuddies"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="map">
@@ -36,17 +36,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:background="@color/colorAccent"
-                android:fitsSystemWindows="true"/>
+                android:fitsSystemWindows="true" />
 
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/anim_toolbar"
-                android:background="@color/splash"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:background="@color/splash"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                 />
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
@@ -55,18 +54,19 @@
         android:id="@+id/scrollableview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/float_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:id="@+id/float_button"
         android:clickable="true"
         android:src="@drawable/ic_local_airport_black_24dp"
         app:backgroundTint="#279AF1"
         app:fabSize="normal"
         app:layout_anchor="@+id/appbar"
-        app:layout_anchorGravity="bottom|right|end"/>
+        app:layout_anchorGravity="bottom|right|end" />
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -80,10 +80,10 @@
             android:orientation="vertical">
 
             <!--<fragment-->
-                <!--android:id="@+id/map_info"-->
-                <!--android:name="android.com.avishkar.MapInfo"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="250dp" />-->
+            <!--android:id="@+id/map_info"-->
+            <!--android:name="android.com.avishkar.MapInfo"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="250dp" />-->
 
             <fragment
                 android:id="@+id/map"

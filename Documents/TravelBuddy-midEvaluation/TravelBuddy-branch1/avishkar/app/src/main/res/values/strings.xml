@@ -15,8 +15,9 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="API_KEY">eac6fa72decf8f315716dffff09ec354</string>
-    <string name="API_LINK">http://api.openweathermap.org/data/2.5/weather</string>
+    <string name="WEATHER_API_KEY">appid=eac6fa72decf8f315716dffff09ec354</string>
+    <string name="WEATHER_API_LINK">http://api.openweathermap.org/data/2.5/weather=</string>
+    <string name="TRAVEL_API_KEY">AIzaSyCLAkq9FBr_0tfE4HvRGpe_g7I5i8rXYTU</string>
     <string name="Travel">0</string>
     <string name="WEATHER">1</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email

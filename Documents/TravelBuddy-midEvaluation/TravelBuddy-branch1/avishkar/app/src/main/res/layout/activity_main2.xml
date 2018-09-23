@@ -11,12 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        android:src="@drawable/bg_people" />
+        android:src="@drawable/p1"
+        />
 
     <android.support.percent.PercentRelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBlackTrans"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
-            android:background="@color/colorPrimaryTrans"
+            android:alpha="0.8"
             android:orientation="horizontal"
             app:layout_widthPercent="85%">
 
@@ -33,10 +33,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
+                android:background="#000"
                 android:paddingTop="15dp"
                 android:text="Signin"
                 android:textAllCaps="true"
-                android:textColor="#FFFFFF"
+                android:textColor="#FFF"
                 android:textSize="20sp"
                 android:visibility="gone" />
 
@@ -53,8 +54,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:background="@color/colorAccentTrans"
             android:gravity="center_horizontal"
+            android:alpha="0.8"
             android:orientation="horizontal"
             app:layout_widthPercent="15%">
 
@@ -65,11 +66,11 @@
                 android:gravity="center"
                 android:paddingTop="15dp"
                 android:text="Signup"
+                android:background="#000"
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:visibility="visible" />
-
             <include
                 android:id="@+id/llSignupContent"
                 layout="@layout/layout_signup"

@@ -67,23 +67,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-public class Home extends AppCompatActivity implements Serializable,OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+public class Home extends AppCompatActivity implements Serializable, OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private static transient GoogleMap mMap;
     public static Marker marker;
     static LocationManager locationManager;
     ActionBar actionBar;
-    final int PLACE_AUTOCOMPLETE_REQUEST_CODE=3;
+    final int PLACE_AUTOCOMPLETE_REQUEST_CODE = 3;
     private String email;
     static String city;
     static String lala;
     public static Tours tour;
-    int id,j;
+    int id, j;
     boolean done = false;
     double latitude, longitude;
     public LatLng latLng;
     View fragment;
-
+    public String name;
     //Navigation Drawer
     private PlaceHolderView mDrawerView;
     private DrawerLayout mDrawer;
@@ -101,16 +101,16 @@ public class Home extends AppCompatActivity implements Serializable,OnMapReadyCa
         fragment = findViewById(R.id.map_in);
         id = getIntent().getExtras().getInt("id");
 
-        mDrawer = (DrawerLayout)findViewById(R.id.drawerLayout);
-        mDrawerView = (PlaceHolderView)findViewById(R.id.drawerView);
-        mToolbar = (Toolbar)findViewById(R.id.toolbar);
+        mDrawer = (DrawerLayout) findViewById(R.id.drawerLayout);
+        mDrawerView = (PlaceHolderView) findViewById(R.id.drawerView);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
         Button searchView = mToolbar.findViewById(R.id.search_city);
         searchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent=new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_OVERLAY).build(Home.this);
-                    startActivityForResult(intent,PLACE_AUTOCOMPLETE_REQUEST_CODE);
+                    Intent intent = new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_OVERLAY).build(Home.this);
+                    startActivityForResult(intent, PLACE_AUTOCOMPLETE_REQUEST_CODE);
                 } catch (GooglePlayServicesNotAvailableException e) {
                     e.printStackTrace();
                 } catch (GooglePlayServicesRepairableException e) {
@@ -118,17 +118,10 @@ public class Home extends AppCompatActivity implements Serializable,OnMapReadyCa
                 }
             }
         });
-        mGalleryView = (PlaceHolderView)findViewById(R.id.galleryView);
-     setupDrawer();
-
-//        actionBar=getActionBar();
-//        actionBar.setTitle("ACtion Bar");
-//        actionBar.show();
+        mGalleryView = (PlaceHolderView) findViewById(R.id.galleryView);
+        setupDrawer();
 
 
-//        android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.anim_toolbar);
-//        setSupportActionBar(toolbar);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         locationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(Home.this, android.Manifest.permission.ACCESS_FINE_LOCATION) !=
                 PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(Home.this,
@@ -136,11 +129,7 @@ public class Home extends AppCompatActivity implements Serializable,OnMapReadyCa
             return;
         }
 
-//        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-//                0,
-//                0, locationListenerGPS);
-//        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0,
-//                locationListenerGPS);
+
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
         StrictMode.setThreadPolicy(policy);
@@ -149,52 +138,19 @@ public class Home extends AppCompatActivity implements Serializable,OnMapReadyCa
         mapFragment.getMapAsync(this);
 
 
-
-
-
-
     }
-////    LocationListener locationListenerGPS = new LocationListener() {
-////
-////        @Override
-////        public void onLocationChanged(Location location) {
-////            latitude = location.getLatitude();
-////            longitude = location.getLongitude();
-////            LatLng latLng = new LatLng(latitude,longitude);
-////            if (done == false) {
-////                drawMarker(latLng);
-////                Log.e("OnLoacation", "Changed");
-////                done = true;
-////                getdetails(latLng);
-////            }
-////        }
-//
-//        @Override
-//        public void onStatusChanged(String s, int i, Bundle bundle) {
-//
-//        }
-//
-//        @Override
-//        public void onProviderEnabled(String s) {
-//
-//        }
-//
-//        @Override
-//        public void onProviderDisabled(String s) {
-//
-//        }
-//    };
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode==PLACE_AUTOCOMPLETE_REQUEST_CODE){
-            if(resultCode==RESULT_OK){
-                Place place=PlaceAutocomplete.getPlace(this,data);
-                String name=place.getName().toString();
-                latLng=place.getLatLng();
-                double lat,lng;
-                lat=latLng.latitude;
-                lng=latLng.longitude;
+        if (requestCode == PLACE_AUTOCOMPLETE_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
+                Place place = PlaceAutocomplete.getPlace(this, data);
+                name = place.getName().toString();
+                latLng = place.getLatLng();
+                int lat, lng;
+                lat = (int) latLng.latitude;
+                lng = (int) latLng.longitude;
                 mMap.clear();
                 drawMarker(latLng);
                 TextView placeview = fragment.findViewById(R.id.place);
@@ -202,30 +158,29 @@ public class Home extends AppCompatActivity implements Serializable,OnMapReadyCa
                 TextView address = fragment.findViewById(R.id.address);
                 address.setText(place.getAddress());
                 TextView latView = fragment.findViewById(R.id.lat);
-                latView.setText("Latitude "+String.valueOf(lat));
+                latView.setText("Latitude " + String.valueOf(lat) + "°N");
                 TextView lonView = fragment.findViewById(R.id.lon);
-                lonView.setText("Longitude "+String.valueOf(lng));
+                lonView.setText("Longitude " + String.valueOf(lng) + "°S");
                 setupDrawer();
-                Log.d("Name",name+"\n"+lat+"\n"+lng);
+                Log.d("Name", name + "\n" + lat + "\n" + lng);
             }
 
         }
     }
 
-    public void getdetails(LatLng latLng)
-    {
-        Toast.makeText(Home.this,"service",Toast.LENGTH_LONG).show();
+    public void getdetails(LatLng latLng) {
+        Toast.makeText(Home.this, "service", Toast.LENGTH_LONG).show();
         double latitude = latLng.latitude;
         double longitude = latLng.longitude;
         Geocoder geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
         try {
-            List<Address> adress=geocoder.getFromLocation(latitude,longitude,1);
-            city=adress.get(0).getLocality().toLowerCase();
-            lala="";
-            lala=lala+adress.get(0).getAddressLine(0);
+            List<Address> adress = geocoder.getFromLocation(latitude, longitude, 1);
+            city = adress.get(0).getLocality().toLowerCase();
+            lala = "";
+            lala = lala + adress.get(0).getAddressLine(0);
             System.out.print(city);
-            Toast.makeText(Home.this,city+lala+latitude+longitude,Toast.LENGTH_LONG).show();
-            tour=new Tours(city,lala,latitude,longitude);
+            Toast.makeText(Home.this, city + lala + latitude + longitude, Toast.LENGTH_LONG).show();
+            tour = new Tours(city, lala, latitude, longitude);
 //            TextView place = fragment.findViewById(R.id.place);
 //            place.setText(city);
 //            TextView address = fragment.findViewById(R.id.address);
@@ -238,7 +193,7 @@ public class Home extends AppCompatActivity implements Serializable,OnMapReadyCa
             e.printStackTrace();
         }
 
-        String url="https://maps.googleapis.com/maps/api/place/textsearch/json?query="+city+
+        String url = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + city +
                 "+Tourist&language=en&key=AIzaSyCLAkq9FBr_0tfE4HvRGpe_g7I5i8rXYTU";
         HttpResponse response = null;
         HttpGet request;
@@ -265,25 +220,22 @@ public class Home extends AppCompatActivity implements Serializable,OnMapReadyCa
             JSONArray tours = result.getJSONArray("results");
 
 
-            for (int i=0;i<tours.length();i++)
-            {
+            for (int i = 0; i < tours.length(); i++) {
                 JSONArray place = tours.getJSONObject(i).getJSONArray("types");
                 System.out.println(place.length());
-                for (j=0;j<place.length();j++)
-                {
-                    if (place.getString(j).equals("museum") || place.getString(j).equals("establishment"))
-                    {
+                for (j = 0; j < place.length(); j++) {
+                    if (place.getString(j).equals("museum") || place.getString(j).equals("establishment")) {
                         break;
                     }
                 }
-                if (j!=place.length()&&Double.parseDouble(tours.getJSONObject(i).getString("rating"))>=2.5){
-                    String placeid= tours.getJSONObject(i).getString("place_id");
-                    String address=tours.getJSONObject(i).getString("formatted_address");
-                    String link=tours.getJSONObject(i).getString("icon");
-                    String name=tours.getJSONObject(i).getString("name");
+                if (j != place.length() && Double.parseDouble(tours.getJSONObject(i).getString("rating")) >= 2.5) {
+                    String placeid = tours.getJSONObject(i).getString("place_id");
+                    String address = tours.getJSONObject(i).getString("formatted_address");
+                    String link = tours.getJSONObject(i).getString("icon");
+                    String name = tours.getJSONObject(i).getString("name");
                     double rating = Double.parseDouble(tours.getJSONObject(i).getString("rating"));
-                    String types="Tourism";
-                    Tours tours1 =new Tours(placeid,address,link,name,rating,types,true);
+                    String types = "Tourism";
+                    Tours tours1 = new Tours(placeid, address, link, name, rating, types, true);
                     //list.add(tours1);
                 }
                 //if (list.size()==3)
@@ -303,15 +255,16 @@ public class Home extends AppCompatActivity implements Serializable,OnMapReadyCa
 //                    arrayList.add(hm);
 //                }
 //            }
-        String[]  s={"name"};
-        int [] t={R.id.tv};
+        String[] s = {"name"};
+        int[] t = {R.id.tv};
 //            if (list!=null)
 //            {
 //                mAdapter=new CardAdapter(getApplicationContext(),list);
 //                mRecyclerView.setAdapter(mAdapter);
 //            }
     }
-    public  static String buildStringIOutils(InputStream is) {
+
+    public static String buildStringIOutils(InputStream is) {
         try {
             return IOUtils.toString(is, "UTF-8");
         } catch (IOException e) {
@@ -321,11 +274,9 @@ public class Home extends AppCompatActivity implements Serializable,OnMapReadyCa
     }
 
 
-
-
-    public void drawMarker(LatLng point){
+    public void drawMarker(LatLng point) {
         // Creating an instance of MarkerOptions
-       // Toast.makeText(Home.this,"drawn",Toast.LENGTH_LONG).show();
+        // Toast.makeText(Home.this,"drawn",Toast.LENGTH_LONG).show();
         MarkerOptions markerOptions = new MarkerOptions();
 
         // Setting latitude and longitude for the marker
@@ -333,31 +284,34 @@ public class Home extends AppCompatActivity implements Serializable,OnMapReadyCa
 
         // Adding marker on the Google Map
         marker = mMap.addMarker(markerOptions);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(point,16.0f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(point, 16.0f));
 
 
     }
+
     @Override
-        public boolean onMarkerClick(Marker marker) {
-            Intent placePickerIntent = new Intent(Home.this, MyMapLocation.class);
-            placePickerIntent.putExtra("lat",latitude);
-            placePickerIntent.putExtra("lng",longitude);
-            startActivity(placePickerIntent);
-            return false;
-        }
-
-        @Override
-        public void onMapReady(GoogleMap googleMap) {
-            mMap = googleMap;
-            LatLng latlng1=new LatLng(25.4918881,81.86750959);
-            drawMarker(latlng1);
-            mMap.setOnMarkerClickListener(Home.this);
-        }
-    public Tours getTours() {
-        if (tour!=null)
-        return tour;
-        return new Tours("city","ad",0.00,0.00);
+    public boolean onMarkerClick(Marker marker) {
+        Intent placePickerIntent = new Intent(Home.this, MyMapLocation.class);
+        placePickerIntent.putExtra("lat", latitude);
+        placePickerIntent.putExtra("lng", longitude);
+        startActivity(placePickerIntent);
+        return false;
     }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+        LatLng latlng1 = new LatLng(25.4918881, 81.86750959);
+        drawMarker(latlng1);
+        mMap.setOnMarkerClickListener(Home.this);
+    }
+
+    public Tours getTours() {
+        if (tour != null)
+            return tour;
+        return new Tours("city", "ad", 0.00, 0.00);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.mymenu, menu);
@@ -371,8 +325,8 @@ public class Home extends AppCompatActivity implements Serializable,OnMapReadyCa
         if (id == R.id.mybutton) {
             // do something here
             try {
-                Intent intent=new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_OVERLAY).build(this);
-                startActivityForResult(intent,PLACE_AUTOCOMPLETE_REQUEST_CODE);
+                Intent intent = new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_OVERLAY).build(this);
+                startActivityForResult(intent, PLACE_AUTOCOMPLETE_REQUEST_CODE);
             } catch (GooglePlayServicesNotAvailableException e) {
                 e.printStackTrace();
             } catch (GooglePlayServicesRepairableException e) {
@@ -384,25 +338,26 @@ public class Home extends AppCompatActivity implements Serializable,OnMapReadyCa
     }
 
 
-    private void setupDrawer(){
+    private void setupDrawer() {
         //Toast.makeText(getApplicationContext(),user+"this"+cour,Toast.LENGTH_SHORT).show();
         mDrawerView.removeAllViews();
 
         mDrawerView
-                .addView(new Drawerheader(this.getApplicationContext(),latLng))
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_PROFILE,email))
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_ASSIGNMENTS,email))
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_PROJECTS,email))
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_SHARE,email))
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_TERMS,email))
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_SETTINGS,email))
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_LOGOUT,email));
+                .addView(new Drawerheader(this.getApplicationContext(), latLng))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_PROFILE, name))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_TRAVEL, name))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_PROJECTS, email))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_SHARE, email))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_TERMS, email))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_SETTINGS, email))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_LOGOUT, email));
 
-        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer){
+        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer) {
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
             }
+
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
