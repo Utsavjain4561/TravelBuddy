@@ -1,6 +1,7 @@
 package android.com.avishkar;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -46,40 +47,8 @@ public class PresentTrip extends AppCompatActivity {
         tripdays = (TextView) findViewById(R.id.maxDays);
         sdate = (TextView) findViewById(R.id.startdate);
 
-        //set current storage on adapter
-//        FirebaseDatabase database=FirebaseDatabase.getInstance();
-//        DatabaseReference myRef=database.getReference();
 
-//        email="lokgadarcom";
-//        myRef.child("users").child(email).child("ongoingTrip").child("current").addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                CurrentTour currtour=dataSnapshot.getValue(CurrentTour.class);
-//                title=currtour.title.trim();
-//                from=currtour.source.trim();
-//                to="To: "+currtour.destination.trim();
-//                days=currtour.tripDuration+"";
-//                budget="Budget: "+currtour.budget;
-//                startDate=currtour.startDate;
-//                tit.setText(title);
-//                source.setText(from);
-//                dest.setText(to);
-//                bud.setText(budget);
-//                tripdays.setText(days);
-//                sdate.setText(startDate+"");
-//                mDays=currtour.days;
-//                if(mDays!=null){
-//                    mAdapter=new DaysAdapter(context,mDays,email);
-//                    mRecyclerView.setAdapter(mAdapter);
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
-        CurrentTour currtour = (CurrentTour) getIntent().getSerializableExtra("topresenttrip");
+        final CurrentTour currtour = (CurrentTour) getIntent().getSerializableExtra("topresenttrip");
         email=getIntent().getExtras().getString("email");
         title = currtour.title.trim();
         from = currtour.source.trim();
@@ -106,6 +75,40 @@ public class PresentTrip extends AppCompatActivity {
                     mDays.add(day);
                     mAdapter = new DaysAdapter(context, mDays, email);
                     mRecyclerView.setAdapter(mAdapter);
+                }
+            });
+
+            FloatingActionButton addItem = (FloatingActionButton)findViewById(R.id.addItems);
+            addItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent itineraryIntent = new Intent(PresentTrip.this,ItineraryActivity.class);
+                    itineraryIntent.putExtra("email",email);
+                    startActivity(itineraryIntent);
+                }
+            });
+            FloatingActionButton share = (FloatingActionButton)findViewById(R.id.share);
+            share.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    sharingIntent.setType("text/plain");
+                    String shareBody = "Hey, checkout my ongoing trip to ";
+                    shareBody+=currtour.destination.trim();
+                    shareBody+=" from ";
+                    shareBody+=from+"\n";
+                    if (mDays!=null)
+                    {
+                        for (int i =0; i<mDays.size(); i++)
+                        {
+                            shareBody+="Day "+(i+1)+":\n\t";
+                            shareBody+="How was my day: "+mDays.get(i).description+"\n\t";
+                            shareBody+="Expenses: "+mDays.get(i).expenses+"\t\n";
+                        }
+                    }
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                    startActivity(Intent.createChooser(sharingIntent, "Share via"));
                 }
             });
         }

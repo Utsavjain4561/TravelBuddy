@@ -14,4 +14,7 @@
     <color name="colorYellow">#fdd835</color>
     <color name="splash">#B2ECF0</color>
     <color name="profile">#64B5F6</color>
+    <color name="sunny">#933300</color>
+    <color name="cloudy">#A7B6D7</color>
+    <color name="rainy">#336193</color>
 </resources>

@@ -1,11 +1,21 @@
 package android.com.avishkar;
 
+import android.*;
+import android.Manifest;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.percent.PercentLayoutHelper;
 import android.support.percent.PercentRelativeLayout;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -21,13 +31,18 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.internal.Utility;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
@@ -37,6 +52,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -52,14 +71,18 @@ public class Main2Activity extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
     private TextInputEditText memail,mpassword,signup_memail,signup_mpass,signup_mob;
     LoginButton facebook;
-    Button google;
+    SignInButton google;
     View login_view,signin_view;
     String g_email,f_email;
     private static int RC_SIGN_IN=1;
+    public static final int REQUEST_PERMISSIONS = 101;
     private CallbackManager callbackManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+       // showDialogOK(Main2Activity.this,"");
+        checkAndRequestPermissions(Main2Activity.this);
         FacebookSdk.setApplicationId("418717225322021");
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main2);
@@ -67,6 +90,14 @@ public class Main2Activity extends AppCompatActivity {
                 .requestIdToken("296397114320-jfk9dnk77n4n98tda8gkr338fj31f7i6.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
+        google =(SignInButton)findViewById(R.id.google_login);
+        google.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+                startActivityForResult(signInIntent, RC_SIGN_IN);
+            }
+        });
         GoogleSignInAccount googleSignInAccount = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
         if (googleSignInAccount!=null)
         {
@@ -113,7 +144,7 @@ public class Main2Activity extends AppCompatActivity {
         skipL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent inte=new Intent(Main2Activity.this,MapsActivity.class);
+                Intent inte=new Intent(Main2Activity.this,Home.class);
                 inte.putExtra("id",0);
                 startActivity(inte);
                 finish();
@@ -122,7 +153,7 @@ public class Main2Activity extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent inte=new Intent(Main2Activity.this,MapsActivity.class);
+                Intent inte=new Intent(Main2Activity.this,Home.class);
                 inte.putExtra("id",0);
                 startActivity(inte);
                 finish();
@@ -234,7 +265,7 @@ public class Main2Activity extends AppCompatActivity {
                 FirebaseDatabase mfirebase=FirebaseDatabase.getInstance();
                 DatabaseReference myref = mfirebase.getReference().child("users").child(red_em).child("profile").child("email");
                 myref.setValue(f_email);
-                Intent intent= new Intent(Main2Activity.this,MapsActivity.class);
+                Intent intent= new Intent(Main2Activity.this,Dashboard.class);
                 intent.putExtra("id",1);
                 intent.putExtra("email",red_em);
                 startActivity(intent);
@@ -254,11 +285,10 @@ public class Main2Activity extends AppCompatActivity {
                             Log.d("success", "signInWithCredential:success");
                             FirebaseUser user = firebaseAuth.getCurrentUser();
                             Snackbar.make(getCurrentFocus(),"done",Snackbar.LENGTH_LONG).show();
-                            Intent intent = new Intent(Main2Activity.this,MapsActivity.class);
+                            Intent intent = new Intent(Main2Activity.this,Dashboard.class);
                             intent.putExtra("email",red_em);
                             intent.putExtra("id",1);
                             startActivity(intent);
-                            finish();
                         } else {
                             Log.w("failed", "signInWithCredential:failure", task.getException());
                             Snackbar.make(getCurrentFocus(), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
@@ -317,5 +347,48 @@ public class Main2Activity extends AppCompatActivity {
                 red_email+=email.charAt(i);
         }
         return red_email;
+    }
+    public  void showDialogOK(final Activity context, String message) {
+        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(context);
+        alertBuilder.setCancelable(true);
+        alertBuilder.setTitle("Permission necessary");
+        alertBuilder.setMessage(message);
+        alertBuilder.setPositiveButton(android.R.string.yes,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        checkAndRequestPermissions(context);
+                    }
+                });
+        AlertDialog alert = alertBuilder.create();
+        alert.show();
+    }
+    public  boolean checkAndRequestPermissions(Context context){
+        int coarseLocation = ContextCompat.checkSelfPermission(context,
+                Manifest.permission.ACCESS_COARSE_LOCATION);
+        int fineLocation = ContextCompat.checkSelfPermission(context,
+                Manifest.permission.ACCESS_FINE_LOCATION);
+        int internet = ContextCompat.checkSelfPermission(context,
+                Manifest.permission.INTERNET);
+
+        List<String> listOfPermissions = new ArrayList<>();
+        if(coarseLocation!=PackageManager.PERMISSION_GRANTED){
+            listOfPermissions.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+
+        }
+        if(fineLocation!=PackageManager.PERMISSION_GRANTED){
+            listOfPermissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
+
+        }
+        if(internet!=PackageManager.PERMISSION_GRANTED){
+            listOfPermissions.add(Manifest.permission.INTERNET);
+
+        }
+        if (!listOfPermissions.isEmpty()) {
+            ActivityCompat.requestPermissions(Main2Activity.this, listOfPermissions
+                            .toArray(new String[listOfPermissions.size()]),
+                    REQUEST_PERMISSIONS);
+            return false;
+        }
+        return  true;
     }
 }

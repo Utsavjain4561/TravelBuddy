@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Dashboard extends AppCompatActivity  {
     public static String signinemail;
     private android.support.v7.widget.Toolbar mToolBar;
@@ -64,12 +66,20 @@ public class Dashboard extends AppCompatActivity  {
 
     public void exploreClick(View view) {
         Toast.makeText(Dashboard.this,"Explore",Toast.LENGTH_SHORT).show();
+        FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
+        firebaseAuth.signOut();
+        Intent intent1 = new Intent(Dashboard.this,Main2Activity.class);
+        startActivity(intent1);
         mDrawerLayout.closeDrawer(GravityCompat.START);
     }
 
     public void homeClick(View view) {
         Toast.makeText(Dashboard.this,"Home",Toast.LENGTH_SHORT).show();
+        Intent homeIntent = new Intent(Dashboard.this,Home.class);
+        homeIntent.putExtra("id",1);
+        homeIntent.putExtra("email",signinemail);
         mDrawerLayout.closeDrawer(GravityCompat.START);
+        startActivity(homeIntent);
     }
 
     public void shareClick(View view) {

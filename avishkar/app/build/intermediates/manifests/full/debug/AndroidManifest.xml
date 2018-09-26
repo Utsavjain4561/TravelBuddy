@@ -44,8 +44,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         <service
-            android:name="android.com.avishkar.MapsActivity$LocationService"
-            android:label=".MapsActivity$LocationService" />
+            android:name="android.com.avishkar.HomeActivity$LocationService"
+            android:label=".HomeActivity$LocationService" />
+        <service android:name="android.com.avishkar.WeatherService" />
 
         <activity android:name="android.com.avishkar.map" />
         <activity android:name="android.com.avishkar.MyMapLocation" />
@@ -95,6 +96,15 @@
         <activity android:name="android.com.avishkar.Main2Activity" />
         <activity android:name="android.com.avishkar.PresentTrip" />
         <activity android:name="android.com.avishkar.Profile" />
+        <activity android:name="android.com.avishkar.Home" />
+        <activity android:name="android.com.avishkar.Features" />
+        <activity android:name="android.com.avishkar.ItineraryActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.facebook.CustomTabMainActivity" />
 
         <meta-data

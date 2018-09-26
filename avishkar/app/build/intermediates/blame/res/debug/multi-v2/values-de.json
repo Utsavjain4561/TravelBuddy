@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-utsav1\\TravelBuddy-utsav1\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\res\\merged\\debug\\values-de\\values-de.xml",
+            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-MidEvaluation\\TravelBuddy-MidEvaluation\\Documents\\TravelBuddy-midEvaluation\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\res\\merged\\debug\\values-de\\values-de.xml",
             "map": [
                 {
                     "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\b32ba96ca3f0d134109f568e074294e3\\res\\values-de\\values-de.xml",
@@ -89,6 +89,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\7f39e9f8242e521d4dd765dd374ab376\\res\\values-de\\values-de.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,218,358,500,621,709,801,884,976,1072,1183,1292,1384,1476,1578,1695,1777,1860,2067,2163,2272,2383,2493",
+                        "endColumns": "162,139,141,120,87,91,82,91,95,110,108,91,91,101,116,81,82,206,95,108,110,109,137",
+                        "endOffsets": "213,353,495,616,704,796,879,971,1067,1178,1287,1379,1471,1573,1690,1772,1855,2062,2158,2267,2378,2488,2626"
+                    },
+                    "to": {
+                        "startLines": "19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1852,2015,2155,2297,2418,2506,2598,2681,2773,2869,2980,3089,3181,3273,3375,3492,3574,3657,3864,3960,4069,4180,4290",
+                        "endColumns": "162,139,141,120,87,91,82,91,95,110,108,91,91,101,116,81,82,206,95,108,110,109,137",
+                        "endOffsets": "2010,2150,2292,2413,2501,2593,2676,2768,2864,2975,3084,3176,3268,3370,3487,3569,3652,3859,3955,4064,4175,4285,4423"
+                    }
+                },
+                {
                     "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-12.0.1.aar\\fa59a1e3ba3ba946fc81d9eec9a47d08\\res\\values-de\\values.xml",
                     "from": {
                         "startLines": "4",
@@ -103,29 +120,12 @@
                         "startOffsets": "5648",
                         "endColumns": "203",
                         "endOffsets": "5847"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.0.aar\\c1e1ad8eed4635af3895823b40b82b3d\\res\\values-de\\values-de.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,218,358,500,621,709,801,884,976,1072,1183,1292,1384,1476,1578,1695,1777,1860,2067,2163,2272,2383,2493",
-                        "endColumns": "162,139,141,120,87,91,82,91,95,110,108,91,91,101,116,81,82,206,95,108,110,109,137",
-                        "endOffsets": "213,353,495,616,704,796,879,971,1067,1178,1287,1379,1471,1573,1690,1772,1855,2062,2158,2267,2378,2488,2626"
-                    },
-                    "to": {
-                        "startLines": "19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1852,2015,2155,2297,2418,2506,2598,2681,2773,2869,2980,3089,3181,3273,3375,3492,3574,3657,3864,3960,4069,4180,4290",
-                        "endColumns": "162,139,141,120,87,91,82,91,95,110,108,91,91,101,116,81,82,206,95,108,110,109,137",
-                        "endOffsets": "2010,2150,2292,2413,2501,2593,2676,2768,2864,2975,3084,3176,3268,3370,3487,3569,3652,3859,3955,4064,4175,4285,4423"
                     }
                 }
             ]
         },
         {
-            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-utsav1\\TravelBuddy-utsav1\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
+            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-MidEvaluation\\TravelBuddy-MidEvaluation\\Documents\\TravelBuddy-midEvaluation\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de\\values-de.xml",
             "map": [
                 {
                     "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\b32ba96ca3f0d134109f568e074294e3\\res\\values-de\\values-de.xml",
@@ -213,6 +213,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.1.aar\\7f39e9f8242e521d4dd765dd374ab376\\res\\values-de\\values-de.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,218,358,500,621,709,801,884,976,1072,1183,1292,1384,1476,1578,1695,1777,1860,2067,2163,2272,2383,2493",
+                        "endColumns": "162,139,141,120,87,91,82,91,95,110,108,91,91,101,116,81,82,206,95,108,110,109,137",
+                        "endOffsets": "213,353,495,616,704,796,879,971,1067,1178,1287,1379,1471,1573,1690,1772,1855,2062,2158,2267,2378,2488,2626"
+                    },
+                    "to": {
+                        "startLines": "19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1852,2015,2155,2297,2418,2506,2598,2681,2773,2869,2980,3089,3181,3273,3375,3492,3574,3657,3864,3960,4069,4180,4290",
+                        "endColumns": "162,139,141,120,87,91,82,91,95,110,108,91,91,101,116,81,82,206,95,108,110,109,137",
+                        "endOffsets": "2010,2150,2292,2413,2501,2593,2676,2768,2864,2975,3084,3176,3268,3370,3487,3569,3652,3859,3955,4064,4175,4285,4423"
+                    }
+                },
+                {
                     "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-12.0.1.aar\\fa59a1e3ba3ba946fc81d9eec9a47d08\\res\\values-de\\values.xml",
                     "from": {
                         "startLines": "4",
@@ -227,23 +244,6 @@
                         "startOffsets": "5648",
                         "endColumns": "203",
                         "endOffsets": "5847"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-login-4.36.0.aar\\c1e1ad8eed4635af3895823b40b82b3d\\res\\values-de\\values-de.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,218,358,500,621,709,801,884,976,1072,1183,1292,1384,1476,1578,1695,1777,1860,2067,2163,2272,2383,2493",
-                        "endColumns": "162,139,141,120,87,91,82,91,95,110,108,91,91,101,116,81,82,206,95,108,110,109,137",
-                        "endOffsets": "213,353,495,616,704,796,879,971,1067,1178,1287,1379,1471,1573,1690,1772,1855,2062,2158,2267,2378,2488,2626"
-                    },
-                    "to": {
-                        "startLines": "19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1852,2015,2155,2297,2418,2506,2598,2681,2773,2869,2980,3089,3181,3273,3375,3492,3574,3657,3864,3960,4069,4180,4290",
-                        "endColumns": "162,139,141,120,87,91,82,91,95,110,108,91,91,101,116,81,82,206,95,108,110,109,137",
-                        "endOffsets": "2010,2150,2292,2413,2501,2593,2676,2768,2864,2975,3084,3176,3268,3370,3487,3569,3652,3859,3955,4064,4175,4285,4423"
                     }
                 }
             ]

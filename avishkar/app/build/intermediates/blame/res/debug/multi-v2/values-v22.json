@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-utsav1\\TravelBuddy-utsav1\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
+            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-MidEvaluation\\TravelBuddy-MidEvaluation\\Documents\\TravelBuddy-midEvaluation\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\res\\merged\\debug\\values-v22\\values-v22.xml",
             "map": [
                 {
                     "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\10dee40ceab22d66a648461fbae9144e\\res\\values-v22\\values-v22.xml",
@@ -17,7 +17,7 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-utsav1\\TravelBuddy-utsav1\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\res\\merged\\debug\\values-v22\\values-v22.xml",
+            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-MidEvaluation\\TravelBuddy-MidEvaluation\\Documents\\TravelBuddy-midEvaluation\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
             "map": [
                 {
                     "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\10dee40ceab22d66a648461fbae9144e\\res\\values-v22\\values-v22.xml",

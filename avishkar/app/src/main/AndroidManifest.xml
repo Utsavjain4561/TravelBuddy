@@ -20,8 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <service
-            android:name=".MapsActivity$LocationService"
-            android:label=".MapsActivity$LocationService" />
+            android:name=".HomeActivity$LocationService"
+            android:label=".HomeActivity$LocationService" />
+        <service android:name=".WeatherService" />
 
         <activity android:name=".map" />
         <activity android:name=".MyMapLocation" />
@@ -69,7 +70,16 @@
         <activity android:name=".Dashboard" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".PresentTrip" />
-        <activity android:name=".Profile"></activity>
+        <activity android:name=".Profile" />
+        <activity android:name=".Home" />
+        <activity android:name=".Features" />
+        <activity android:name=".ItineraryActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

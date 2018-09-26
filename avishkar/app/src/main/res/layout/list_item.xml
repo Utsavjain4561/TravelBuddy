@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/list_view_item"
     android:padding="8dp"
     android:orientation="vertical">
@@ -93,6 +95,18 @@
         android:layout_alignBottom="@+id/tv4"
         android:layout_toEndOf="@+id/tv4"
         android:padding="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/itirenary_list"
+            android:layout_margin="10dp"
+            android:layout_below="@id/date"
+            android:inputType="textMultiLine"
+            android:autoSizeTextType="uniform"
+            />
+
+
 
 
 

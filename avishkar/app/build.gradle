@@ -26,6 +26,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -34,7 +35,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    //implementation 'com.android.support:appcompat-v7:+'
+    //implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.google.android.gms:play-services-places:12.0.1'
     implementation 'org.apache.httpcomponents:httpcore:4.4.1'
@@ -58,6 +59,8 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     compile 'com.android.support:support-annotations:27.1.1'
     compile 'com.google.android.gms:play-services-auth:12.0.1'
+    implementation 'com.google.android.gms:play-services-location:12.0.1'
+    implementation 'com.mindorks:placeholderview:0.7.1'
 
 }
 

@@ -38,6 +38,8 @@ public class TripsAdapter extends ArrayAdapter {
         destination.setText(trips.getDestination());
         TextView days = (TextView) listItem.findViewById(R.id.days);
         days.setText(String.valueOf(trips.getDays()));
+        TextView itirenary = (TextView) listItem.findViewById(R.id.itirenary_list);
+        itirenary.setText(trips.getItirenrary());
         TextView date = (TextView) listItem.findViewById(R.id.date);
         date.setText(trips.getDate());
         return listItem;

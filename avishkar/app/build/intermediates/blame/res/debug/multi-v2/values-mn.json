@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-utsav1\\TravelBuddy-utsav1\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mn\\values-mn.xml",
+            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-MidEvaluation\\TravelBuddy-MidEvaluation\\Documents\\TravelBuddy-midEvaluation\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mn\\values-mn.xml",
             "map": [
                 {
                     "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-12.0.1.aar\\fa59a1e3ba3ba946fc81d9eec9a47d08\\res\\values-mn\\values.xml",
@@ -108,7 +108,7 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-utsav1\\TravelBuddy-utsav1\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\res\\merged\\debug\\values-mn\\values-mn.xml",
+            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-MidEvaluation\\TravelBuddy-MidEvaluation\\Documents\\TravelBuddy-midEvaluation\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\res\\merged\\debug\\values-mn\\values-mn.xml",
             "map": [
                 {
                     "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-12.0.1.aar\\fa59a1e3ba3ba946fc81d9eec9a47d08\\res\\values-mn\\values.xml",
