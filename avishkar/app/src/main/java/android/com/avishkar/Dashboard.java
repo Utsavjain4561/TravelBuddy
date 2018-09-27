@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.majeur.cling.Cling;
+import com.majeur.cling.ClingManager;
+import com.majeur.cling.ViewTarget;
 
 public class Dashboard extends AppCompatActivity  {
     public static String signinemail;
@@ -26,6 +29,7 @@ public class Dashboard extends AppCompatActivity  {
         signinemail = getIntent().getExtras().getString("email");
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mNavigationView = findViewById(R.id.navigation_view);
+        show_tut();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout,mToolBar,
                 R.string.navigation_draw_open, R.string.navigation_draw_close);
         mDrawerLayout.addDrawerListener(toggle);
@@ -46,8 +50,6 @@ public class Dashboard extends AppCompatActivity  {
             mDrawerLayout.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
-            finish();
-            System.exit(0);
         }
 
     }
@@ -80,22 +82,23 @@ public class Dashboard extends AppCompatActivity  {
         homeIntent.putExtra("email",signinemail);
         mDrawerLayout.closeDrawer(GravityCompat.START);
         startActivity(homeIntent);
+        finish();
     }
 
-    public void shareClick(View view) {
-        Toast.makeText(Dashboard.this,"Share",Toast.LENGTH_SHORT).show();
-        String shareBody = "Here is the share content body";
-        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-        sharingIntent.setType("text/plain");
-        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
-        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-        startActivity(Intent.createChooser(sharingIntent, "xzy"));
-        mDrawerLayout.closeDrawer(GravityCompat.START);
-
-    }
 
     public void settingsClick(View view) {
         Toast.makeText(Dashboard.this,"Settings",Toast.LENGTH_SHORT).show();
         mDrawerLayout.closeDrawer(GravityCompat.START);
+    }
+    private void show_tut()
+    {
+        ClingManager clingManager = new ClingManager(this);
+        clingManager.addCling(new Cling.Builder(this)
+                .setTarget(new ViewTarget(this,R.id.saveCurrentTour))
+                .setTitle("Add a new Trip")
+                .setMessageBackground(getResources().getColor(R.color.profile))
+                .setContent("Add and save your experiences here")
+                .build());
+        clingManager.start();
     }
 }

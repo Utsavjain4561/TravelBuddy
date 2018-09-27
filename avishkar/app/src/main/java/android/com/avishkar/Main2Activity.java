@@ -80,12 +80,18 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-       // showDialogOK(Main2Activity.this,"");
-        checkAndRequestPermissions(Main2Activity.this);
-        FacebookSdk.setApplicationId("418717225322021");
-        FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main2);
+        checkAndRequestPermissions(Main2Activity.this);
+       // showDialogOK(Main2Activity.this,"");
+        FirebaseUser firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
+        if (firebaseUser!=null)
+        {
+            red_em = parse(firebaseUser.getEmail());
+            Intent intent = new Intent(Main2Activity.this,Home.class);
+            intent.putExtra("email",red_em);
+            intent.putExtra("id",1);
+            startActivity(intent);
+        }
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken("296397114320-jfk9dnk77n4n98tda8gkr338fj31f7i6.apps.googleusercontent.com")
                 .requestEmail()
@@ -109,25 +115,7 @@ public class Main2Activity extends AppCompatActivity {
             myref.child("users").child(red_em).child("profile").setValue(user);
         }
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-        facebook=(LoginButton)findViewById(R.id.fblogin);
         callbackManager = CallbackManager.Factory.create();
-        facebook.setReadPermissions("email","public_profile");
-        facebook.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                Toast.makeText(Main2Activity.this, "facebook logged in", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onCancel() {
-                Toast.makeText(Main2Activity.this,"no",Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onError(FacebookException error) {
-                Toast.makeText(Main2Activity.this,error.toString(),Toast.LENGTH_LONG).show();
-            }
-        });
         tvSigninInvoker=(TextView) findViewById(R.id.tvSigninInvoker);
         tvSignupInvoker=(TextView) findViewById(R.id.tvSignupInvoker);
         login_view = (View)findViewById(R.id.llSigninContent);
@@ -147,7 +135,6 @@ public class Main2Activity extends AppCompatActivity {
                 Intent inte=new Intent(Main2Activity.this,Home.class);
                 inte.putExtra("id",0);
                 startActivity(inte);
-                finish();
             }
         });
         skip.setOnClickListener(new View.OnClickListener() {
@@ -156,28 +143,32 @@ public class Main2Activity extends AppCompatActivity {
                 Intent inte=new Intent(Main2Activity.this,Home.class);
                 inte.putExtra("id",0);
                 startActivity(inte);
-                finish();
             }
         });
         btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            firebaseAuth=FirebaseAuth.getInstance();
-            firebaseAuth.signInWithEmailAndPassword(memail.getText().toString().trim(),mpassword.getText().toString().trim()).addOnCompleteListener(Main2Activity.this, new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (!task.isSuccessful())
-                        Toast.makeText(Main2Activity.this, "error logging in"+task.getException(), Toast.LENGTH_LONG).show();
-                    else
-                    {
-                        Intent temp=new Intent(Main2Activity.this,Dashboard.class);
-                        red_em=parse(memail.getText().toString());
-                        temp.putExtra("email",red_em);
-                        temp.putExtra("id",1);
-                        startActivity(temp);
-                    }
+                if (memail.getText().toString().equals("")||mpassword.getText().toString().equals(""))
+                {
+                    Snackbar.make(getCurrentFocus(),"Incomplete Details",Snackbar.LENGTH_LONG).show();
                 }
-            });
+                else {
+                    firebaseAuth = FirebaseAuth.getInstance();
+                    firebaseAuth.signInWithEmailAndPassword(memail.getText().toString().trim(), mpassword.getText().toString().trim()).addOnCompleteListener(Main2Activity.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (!task.isSuccessful())
+                                Toast.makeText(Main2Activity.this, "error logging in" + task.getException(), Toast.LENGTH_LONG).show();
+                            else {
+                                Intent temp = new Intent(Main2Activity.this, Home.class);
+                                red_em = parse(memail.getText().toString());
+                                temp.putExtra("email", red_em);
+                                temp.putExtra("id", 1);
+                                startActivity(temp);
+                            }
+                        }
+                    });
+                }
             }
         });
         btnSignup.setOnClickListener(new View.OnClickListener() {
@@ -253,25 +244,6 @@ public class Main2Activity extends AppCompatActivity {
                 Log.w("failed", "Google sign in failed", e);
             }
         }
-        else
-        {
-            Log.e("fb",resultCode+"");
-            if (resultCode==0)
-            {
-                Snackbar.make(getCurrentFocus(),"Try Again Later",Snackbar.LENGTH_LONG).show();
-            }
-            else {
-                UserLogin user = new UserLogin(f_email,"N/A",0,0,0);
-                FirebaseDatabase mfirebase=FirebaseDatabase.getInstance();
-                DatabaseReference myref = mfirebase.getReference().child("users").child(red_em).child("profile").child("email");
-                myref.setValue(f_email);
-                Intent intent= new Intent(Main2Activity.this,Dashboard.class);
-                intent.putExtra("id",1);
-                intent.putExtra("email",red_em);
-                startActivity(intent);
-                finish();
-            }
-        }
     }
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
         Log.d("mailed", "firebaseAuthWithGoogle:" + acct.getId());
@@ -285,7 +257,7 @@ public class Main2Activity extends AppCompatActivity {
                             Log.d("success", "signInWithCredential:success");
                             FirebaseUser user = firebaseAuth.getCurrentUser();
                             Snackbar.make(getCurrentFocus(),"done",Snackbar.LENGTH_LONG).show();
-                            Intent intent = new Intent(Main2Activity.this,Dashboard.class);
+                            Intent intent = new Intent(Main2Activity.this,Home.class);
                             intent.putExtra("email",red_em);
                             intent.putExtra("id",1);
                             startActivity(intent);
@@ -390,5 +362,13 @@ public class Main2Activity extends AppCompatActivity {
             return false;
         }
         return  true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }

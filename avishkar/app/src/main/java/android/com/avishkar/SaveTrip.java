@@ -1,11 +1,14 @@
 package android.com.avishkar;
 
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +16,7 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
@@ -57,23 +61,25 @@ public class SaveTrip extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == PLACE_AUTOCOMPLETE_REQUEST_CODE_SOURCE){
+            Log.e("1st",resultCode+"");
             if(resultCode == RESULT_OK){
-                Place place= PlaceAutocomplete.getPlace(getActivity(),data);
-                source = place.getName().toString();
-                sourceLat = place.getLatLng().latitude;
-                sourceLng = place.getLatLng().longitude;
+                Place place1= PlaceAutocomplete.getPlace(getContext(),data);
+                source = place1.getName().toString();
+                sourceLat = place1.getLatLng().latitude;
+                sourceLng = place1.getLatLng().longitude;
                 mSource.setText(source);
-
+                Log.e("source",sourceLat+" "+sourceLng);
             }
         }
         else if(requestCode == PLACE_AUTOCOMPLETE_REQUEST_CODE_DESTINATION){
+            Log.e("2nd",resultCode+"");
             if(resultCode == RESULT_OK){
-                Place place= PlaceAutocomplete.getPlace(getActivity(),data);
-                destination = place.getName().toString();
-                destinationLat = place.getLatLng().latitude;
-                destinationLng = place.getLatLng().longitude;
+                Place place2= PlaceAutocomplete.getPlace(getContext(),data);
+                destination = place2.getName().toString();
+                destinationLat = place2.getLatLng().latitude;
+                destinationLng = place2.getLatLng().longitude;
+                Log.e("Destination",destinationLat+" "+destinationLng);
                 mDestination.setText(destination);
-
             }
         }
     }
@@ -120,14 +126,17 @@ public class SaveTrip extends Fragment {
             @Override
             public void onClick(View view) {
 
-                days = Integer.parseInt(mDays.getText().toString());
                 date = mCalendar.getDate();
                 itirenary = mItirenary.getText().toString();
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
                 actual_date=sdf.format(new Date(date));
                 email =((Dashboard)getActivity()).getEmail();
-                    Trips trips = new Trips(source, destination, actual_date, days,itirenary,sourceLat,sourceLng,destinationLat,
-                            destinationLng,1);
+                if (source==null||destination==null||mDays.getText().toString().equals(""))
+                    Snackbar.make(getView(),"Incomplete Details",Snackbar.LENGTH_LONG).show();
+                else {
+                   days = Integer.parseInt(mDays.getText().toString());
+                    Trips trips = new Trips(source, destination, actual_date, days, itirenary, sourceLat, sourceLng, destinationLat,
+                            destinationLng, 1);
                     Log.e("trip", trips + "");
                     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
                     final UserLogin[] userLogin = new UserLogin[1];
@@ -148,10 +157,13 @@ public class SaveTrip extends Fragment {
 
                         }
                     });
-              getFragmentManager().beginTransaction().replace(R.id.frame,new ViewPagerFragment()).commit();
+                    getFragmentManager().beginTransaction().replace(R.id.frame,new ViewPagerFragment()).commit();
+
+                }
             }
         });
         return view;
 
     }
+
 }

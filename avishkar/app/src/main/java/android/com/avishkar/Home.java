@@ -21,6 +21,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -52,6 +53,14 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.majeur.cling.Cling;
+import com.majeur.cling.ClingManager;
+import com.majeur.cling.ViewTarget;
 import com.mindorks.placeholderview.PlaceHolderView;
 
 import org.apache.commons.io.IOUtils;
@@ -84,7 +93,7 @@ public class Home extends AppCompatActivity implements Serializable, OnMapReadyC
     int id, j;
     boolean done = false;
     double latitude = 25.4918881, longitude = 81.86750959;
-    double homeLatitude = 25.4918881,homeLongitude=81.86750959;
+    double homeLatitude = 25.4918881, homeLongitude = 81.86750959;
     public LatLng latLng;
     View fragment;
     public String name = "Allahabad";
@@ -94,7 +103,7 @@ public class Home extends AppCompatActivity implements Serializable, OnMapReadyC
     private Toolbar mToolbar;
     private PlaceHolderView mGalleryView;
     private Button gpsView;
-    private boolean state =true;
+    private boolean state = true;
     private TextView placeview;
     private TextView address;
     private TextView latView;
@@ -117,7 +126,33 @@ public class Home extends AppCompatActivity implements Serializable, OnMapReadyC
         mDrawerView = (PlaceHolderView) findViewById(R.id.drawerView);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         gpsView = (Button) findViewById(R.id.recenter);
+        mDrawer.openDrawer(GravityCompat.START);
+        mToolbar.setTitle("Home");
+        mToolbar.setTitleTextColor(getResources().getColor(R.color.colorAccent));
         Button searchView = mToolbar.findViewById(R.id.search_city);
+        mGalleryView = (PlaceHolderView) findViewById(R.id.galleryView);
+        setupDrawer();
+        if (id==0)
+        showTut();
+        if (id==1) {
+            FirebaseDatabase myfire = FirebaseDatabase.getInstance();
+            final int[] new_user = {0};
+            DatabaseReference myref = myfire.getReference().child("users").child(email);
+            myref.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (!dataSnapshot.hasChild("ongoingTrip")&&!dataSnapshot.hasChild("trips"))
+                        new_user[0] = 1;
+                    if (new_user[0] == 1)
+                        showTut();
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+        }
         searchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -131,10 +166,6 @@ public class Home extends AppCompatActivity implements Serializable, OnMapReadyC
                 }
             }
         });
-        mGalleryView = (PlaceHolderView) findViewById(R.id.galleryView);
-        setupDrawer();
-
-
         locationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(Home.this, android.Manifest.permission.ACCESS_FINE_LOCATION) !=
                 PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(Home.this,
@@ -165,7 +196,6 @@ public class Home extends AppCompatActivity implements Serializable, OnMapReadyC
         mapFragment.getMapAsync(this);
 
 
-
         gpsView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -177,32 +207,30 @@ public class Home extends AppCompatActivity implements Serializable, OnMapReadyC
                     mMap.clear();
                     placeview.setText(name);
                     address.setText(add);
-                    latView.setText((int)homeLatitude+"°N");
-                    lonView.setText((int)homeLongitude+"°S");
+                    latView.setText((int) homeLatitude + "°N");
+                    lonView.setText((int) homeLongitude + "°S");
                     latitude = homeLatitude;
                     longitude = homeLongitude;
-                    latLng = new LatLng(latitude,longitude);
+                    latLng = new LatLng(latitude, longitude);
                     setupDrawer();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                drawMarker(new LatLng(homeLatitude,homeLongitude));
-
+                drawMarker(new LatLng(homeLatitude, homeLongitude));
             }
         });
 
 
-
-
     }
-     LocationListener locationListenerGPS = new LocationListener() {
+
+    LocationListener locationListenerGPS = new LocationListener() {
         @Override
         public void onLocationChanged(Location location) {
-                if(state == false){
-                    state = true;
-                    homeLatitude = location.getLatitude();
-                    homeLongitude = location.getLongitude();
-                }
+            if (state == false) {
+                state = true;
+                homeLatitude = location.getLatitude();
+                homeLongitude = location.getLongitude();
+            }
 
 
         }
@@ -369,20 +397,21 @@ public class Home extends AppCompatActivity implements Serializable, OnMapReadyC
         // Adding marker on the Google Map
         marker = mMap.addMarker(markerOptions);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(point, 10.0f));
-         CameraPosition cameraPosition =  CameraPosition.builder().target(point).zoom(17).bearing(0).tilt(75).build();
-         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),3000,null);
+        CameraPosition cameraPosition = CameraPosition.builder().target(point).zoom(17).bearing(0).tilt(75).build();
+        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition), 3000, null);
 
 
     }
+
 
     @Override
     public boolean onMarkerClick(Marker marker) {
         Intent placePickerIntent = new Intent(Home.this, MyMapLocation.class);
         placePickerIntent.putExtra("lat", latitude);
         placePickerIntent.putExtra("lng", longitude);
-        placePickerIntent.putExtra("city",name);
+        placePickerIntent.putExtra("city", name);
+        placePickerIntent.putExtra("feature",102);
         startActivity(placePickerIntent);
-        finish();
         return false;
     }
 
@@ -429,17 +458,18 @@ public class Home extends AppCompatActivity implements Serializable, OnMapReadyC
     private void setupDrawer() {
         //Toast.makeText(getApplicationContext(),user+"this"+cour,Toast.LENGTH_SHORT).show();
         mDrawerView.removeAllViews();
-
         mDrawerView
-                .addView(new Drawerheader(this.getApplicationContext(), latLng))
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_PROFILE, name,latitude,longitude))
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_HOME, name,latitude,longitude))
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_TOURISTS, name,latitude,longitude))
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_TRANSPORTS, name,latitude,longitude))
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_ETERIES, name,latitude,longitude))
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_AIDS, name,latitude,longitude))
-
-                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_LOGOUT, name,latitude,longitude));
+                .addView(new Drawerheader(this.getApplicationContext(), latLng));
+        if (id == 1)
+            mDrawerView.addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_PROFILE, email, latitude, longitude))
+                    .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_HOME, email, latitude, longitude));
+        mDrawerView.addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_TOURISTS, name, latitude, longitude))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_TRANSPORTS, name, latitude, longitude))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_ETERIES, name, latitude, longitude))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_AIDS, name, latitude, longitude));
+        if (id == 1)
+            mDrawerView.addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.DRAWER_MENU_ITEM_LOGOUT, email, latitude, longitude))
+                    ;
 
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer) {
             @Override
@@ -454,6 +484,48 @@ public class Home extends AppCompatActivity implements Serializable, OnMapReadyC
         };
         mDrawer.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mDrawer.closeDrawer(GravityCompat.START);
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if (mDrawer.isDrawerOpen(GravityCompat.START)) {
+            mDrawer.closeDrawer(GravityCompat.START);
+        }
+        else
+            super.onBackPressed();
+    }
+    private void showTut() {
+        ClingManager mClingManager = new ClingManager(this);
+
+        mClingManager.addCling(new Cling.Builder(this)
+                .setTitle("Welcome to Gallivanters")
+                .setMessageBackground(getResources().getColor(R.color.profile))
+                .setContentTextAppearance(R.id.card_item)
+                .setContent("An application that will locate everything for you")
+                .build());
+        mClingManager.addCling(new Cling.Builder(this)
+                .setTitle("Current Location")
+                .setContent("Set  your current location")
+                .setMessageBackground(getResources().getColor(R.color.profile))
+                .setContentTextAppearance(R.id.card_item)
+                .setTarget(new com.majeur.cling.ViewTarget(this, R.id.recenter))
+                .build());
+        mClingManager.addCling(new Cling.Builder(this)
+                .setTitle("Checkout the Drawer")
+                .setContent("Here you can check weather, tourist places and many more things !!")
+                .setMessageBackground(getResources().getColor(R.color.profile))
+                .setContentTextAppearance(R.id.card_item)
+                .setTarget(new ViewTarget(this,R.id.toolbar))
+                .build()
+        );
+        mClingManager.start();
     }
 
 }

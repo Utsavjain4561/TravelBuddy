@@ -77,6 +77,18 @@ public class WeatherService extends Service {
         return START_STICKY;
 
     }
+    public String city_fomatter(String city)
+    {
+        String x="";
+        for (int i =0 ; i < city.length() ;i++)
+        {
+            if (city.charAt(i)==' ')
+                x+='+';
+            else
+                x+=city.charAt(i);
+        }
+        return x;
+    }
     public static String buildStringIOutils(InputStream is){
         try {
             return IOUtils.toString(is,"UTF-8");
@@ -88,6 +100,7 @@ public class WeatherService extends Service {
     }
     public void parseTravel(Intent intent){
         String city = intent.getExtras().getString("city");
+        city = city_fomatter(city);
         Log.e("ServiceCity",city);
         String place = intent.getExtras().getString("place");
         String museumurl = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=museum%20"+city+
@@ -146,6 +159,7 @@ public class WeatherService extends Service {
     public void parseAirport(Intent intent)
     {
         String city = intent.getExtras().getString("city");
+        city = city_fomatter(city);
         Log.e("ServiceCity1",city);
         String place = intent.getExtras().getString("place");
         String museumurl = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=airport%20"+city+
@@ -156,6 +170,7 @@ public class WeatherService extends Service {
     public void parseRailways(Intent intent)
     {
         String city = intent.getExtras().getString("city");
+        city = city_fomatter(city);
         Log.e("ServiceCity1",city);
         String place = intent.getExtras().getString("place");
         String museumurl = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=train_station%20"+city+
@@ -166,6 +181,7 @@ public class WeatherService extends Service {
     public void parseBus(Intent intent)
     {
         String city = intent.getExtras().getString("city");
+        city = city_fomatter(city);
         Log.e("ServiceCity1",city);
         String place = intent.getExtras().getString("place");
         String museumurl = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=bus_station%20"+city+
@@ -176,6 +192,7 @@ public class WeatherService extends Service {
     public void parse_restaurant(Intent intent)
     {
         String city = intent.getExtras().getString("city");
+        city = city_fomatter(city);
         Log.e("ServiceCity1",city);
         String place = intent.getExtras().getString("place");
         String museumurl = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=restaurants%20"+city+
@@ -186,6 +203,7 @@ public class WeatherService extends Service {
     public void parse_cafe(Intent intent)
     {
         String city = intent.getExtras().getString("city");
+        city = city_fomatter(city);
         Log.e("ServiceCity1",city);
         String place = intent.getExtras().getString("place");
         String museumurl = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=cafe%20"+city+
@@ -196,6 +214,7 @@ public class WeatherService extends Service {
     public void parse_hospital(Intent intent)
     {
         String city = intent.getExtras().getString("city");
+        city = city_fomatter(city);
         Log.e("ServiceCity1",city);
         String place = intent.getExtras().getString("place");
         String museumurl = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=hospital%20"+city+
@@ -205,6 +224,7 @@ public class WeatherService extends Service {
     public void parse_atm(Intent intent)
     {
         String city = intent.getExtras().getString("city");
+        city = city_fomatter(city);
         Log.e("ServiceCity1",city);
         String place = intent.getExtras().getString("place");
         String museumurl = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=atm%20"+city+

@@ -31,11 +31,10 @@
         android:id="@+id/navigation_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
         android:padding="20dp"
         android:background="#263238"
         android:fitsSystemWindows="true"
-
+        android:layout_gravity="start"
         android:layout_marginEnd="-65dp"
         android:layout_marginRight="-65dp"
 
@@ -135,7 +134,7 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.55"
+                    android:layout_weight="1"
 
                     android:weightSum="1"
                     android:orientation="vertical">
@@ -144,7 +143,7 @@
                         android:id="@+id/settings"
                         android:background="@color/colorBlue"
                         android:onClick="settingsClick"
-                        android:src="@drawable/ic_settings"
+                        android:src="@drawable/ic_gallery"
                         android:scaleType="centerInside"
                         android:layout_weight="0.7"
                         android:layout_gravity="center_horizontal"
@@ -162,39 +161,7 @@
                         android:textSize="20dp"
                         android:background="@color/colorBlue"/>
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.05"></LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.4"
-                    android:weightSum="1"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:id="@+id/share"
-                        android:scaleType="centerInside"
 
-                        android:layout_gravity="center_horizontal"
-                        android:onClick="shareClick"
-                        android:layout_height="0dp"
-                        android:src="@drawable/ic_share"
-                        android:background="@color/colorGreen"
-                        android:layout_weight="0.7"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.2"
-                        android:text="Share"
-                        android:textStyle="bold"
-
-                        android:textAlignment="center"
-                        android:textColor="#000"
-                        android:textSize="20dp"
-                        android:background="@color/colorGreen"/>
-                </LinearLayout>
 
             </LinearLayout>
 

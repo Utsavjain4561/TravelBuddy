@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.ramotion.foldingcell.FoldingCell;
 
 import java.util.ArrayList;
 
@@ -31,7 +33,7 @@ import static java.lang.Thread.sleep;
 public class UpcommingFragment extends Fragment {
     private FloatingActionButton addButton;
     public  String email;
-
+    TripsAdapter adapter;
     @Override
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class UpcommingFragment extends Fragment {
         final ListView list = view.findViewById(R.id.upcomming_list);
         addButton = view.findViewById(R.id.addButton);
         email = ((Dashboard)getActivity()).getEmail();
+        final LinearLayout linearLayout = view.findViewById(R.id.not_found_upcoming);
         final ArrayList<Trips> tripDataList = new ArrayList<>();
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         Query query = firebaseDatabase.getReference().child("users")
@@ -51,7 +54,8 @@ public class UpcommingFragment extends Fragment {
                         Trips trip = data.getValue(Trips.class);
                         tripDataList.add(trip);
                     }
-                    TripsAdapter adapter = new TripsAdapter(getContext(),R.layout.list_item,tripDataList);
+                    adapter = new TripsAdapter(getContext(),R.layout.list_item,tripDataList);
+                    linearLayout.setVisibility(View.INVISIBLE);
                     list.setAdapter(adapter);
                 }
 
@@ -61,13 +65,20 @@ public class UpcommingFragment extends Fragment {
             public void onCancelled(DatabaseError databaseError) {
 
             }});
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                ((FoldingCell)view).toggle(false);
+                adapter.registerToggle(i);
+            }
+        });
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, final int i, long l) {
                 final FirebaseDatabase database = FirebaseDatabase.getInstance();
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
-                alertDialogBuilder.setMessage("");
-                alertDialogBuilder.setNegativeButton("Delete", new DialogInterface.OnClickListener() {
+                alertDialogBuilder.setMessage("Do you want to delete");
+                alertDialogBuilder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int l) {
                                 tripDataList.remove(i);
@@ -93,16 +104,10 @@ public class UpcommingFragment extends Fragment {
 
                                     }
                                 });
-                            }}).setPositiveButton("Route", new DialogInterface.OnClickListener() {
+                            }}).setPositiveButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int l) {
-                        Trips trip = (Trips)list.getItemAtPosition(i);
-                        double soLat = trip.getsLat();
-                        double soLng = trip.getsLng();
-                        double deLat = trip.getdLat();
-                        double deLng = trip.getdLng();
-                        Toast.makeText(getActivity(),"Clicked",Toast.LENGTH_SHORT).show();
-                        Log.e("Lat",soLat+"");
+                        dialogInterface.dismiss();
                     }
                 });
                 AlertDialog alertDialog=alertDialogBuilder.create();

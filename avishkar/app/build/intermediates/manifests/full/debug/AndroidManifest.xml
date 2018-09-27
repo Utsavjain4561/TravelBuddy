@@ -93,17 +93,14 @@
             </intent-filter>
         </activity>
         <activity android:name="android.com.avishkar.Dashboard" />
-        <activity android:name="android.com.avishkar.Main2Activity" />
+        <activity
+            android:name="android.com.avishkar.Main2Activity"
+            android:screenOrientation="portrait" />
         <activity android:name="android.com.avishkar.PresentTrip" />
         <activity android:name="android.com.avishkar.Profile" />
         <activity android:name="android.com.avishkar.Home" />
         <activity android:name="android.com.avishkar.Features" />
         <activity android:name="android.com.avishkar.ItineraryActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.facebook.CustomTabMainActivity" />
 

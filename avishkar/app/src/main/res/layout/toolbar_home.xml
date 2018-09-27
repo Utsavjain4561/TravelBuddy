@@ -5,14 +5,6 @@
     android:layout_height="?attr/actionBarSize"
     android:background="@color/colorBlackTrans">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#fff"
-        android:gravity="left"
-        android:layout_gravity="left"
-        android:textSize="18sp"
-        android:text="Home"/>
     <Button
         android:layout_width="30dp"
         android:layout_height="30dp"

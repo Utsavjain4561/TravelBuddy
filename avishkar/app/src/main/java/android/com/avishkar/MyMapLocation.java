@@ -37,6 +37,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -72,9 +73,11 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
     double lat = 0, lng = 0;
     double latitude = 25.495941, longitude = 81.8631611;
     String city;
+    double sLat,sLng,dLat,dLng;
     final int PLACE_AUTOCOMPLETE_REQUEST_CODE = 3;
     private Toolbar mToolbar;
     public int feature;
+    private Button searchView;
     public Intent in;
     public boolean flag = false;
     View view;
@@ -87,9 +90,21 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
         setContentView(R.layout.my_map_location);
         view = findViewById(R.id.rootView);
         in = getIntent();
-        latitude = getIntent().getExtras().getDouble("lat");
-        longitude = getIntent().getExtras().getDouble("lng");
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setTitle("Route");
+        mToolbar.setTitleTextColor(getResources().getColor(R.color.colorAccent));
+        Button recenter = mToolbar.findViewById(R.id.recenter);
+        recenter.setClickable(false);
+        recenter.setVisibility(View.INVISIBLE);
         feature = getIntent().getExtras().getInt("feature");
+        searchView = mToolbar.findViewById(R.id.search_city);
+        if(feature!=101&&feature!=102) {
+            latitude = getIntent().getExtras().getDouble("lat");
+            longitude = getIntent().getExtras().getDouble("lng");
+            mToolbar.setTitle("Search");
+            searchView.setClickable(false);
+            searchView.setVisibility(View.INVISIBLE);
+        }
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -99,8 +114,6 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        Button searchView = mToolbar.findViewById(R.id.search_city);
         searchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -216,11 +229,11 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
                 city = ad.substring(0, i);
                 break;
             }
-
         }
-        // Adding marker on the Google Map
         marker = map.addMarker(markerOptions);
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(point, 16.0f));
+        CameraPosition cameraPosition = CameraPosition.builder().target(point).zoom(10).bearing(0).tilt(75).build();
+        map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition), 3000, null);
         marker.setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
         marker.setTitle(city);
     }
@@ -260,7 +273,6 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
 
             long distanceForSegment = routes.getJSONObject(0).getJSONArray("legs").getJSONObject(0).getJSONObject("distance").getInt("value");
             Snackbar.make(view,"Distance: "+distanceForSegment/1000+" km",Snackbar.LENGTH_LONG).show();
-            Toast.makeText(MyMapLocation.this,distanceForSegment+"",Toast.LENGTH_SHORT).show();
             Log.e("Distance",distanceForSegment+"");
             JSONArray steps = routes.getJSONObject(0).getJSONArray("legs")
                     .getJSONObject(0).getJSONArray("steps");
@@ -324,8 +336,12 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
-        drawMarker(new LatLng(latitude, longitude));
-        city = in.getExtras().getString("city");
+        if(feature!=101&&feature!=102) {
+            drawMarker(new LatLng(latitude, longitude));
+            city = in.getExtras().getString("city");
+            searchView.setVisibility(View.INVISIBLE);
+            searchView.setClickable(false);
+        }
         Object[] DataTransfer;
         String url = "";
         GetNearbyPlacesData getNearbyPlacesData;
@@ -378,7 +394,30 @@ public class MyMapLocation extends FragmentActivity implements OnMapReadyCallbac
                 getNearbyPlacesData = new GetNearbyPlacesData(latitude, longitude, 4);
                 getNearbyPlacesData.execute(DataTransfer);
                 break;
-
+            case 101:
+                View tool = findViewById(R.id.toolbar);
+                searchView = mToolbar.findViewById(R.id.search_city);
+                searchView.setVisibility(View.INVISIBLE);
+                tool.findViewById(R.id.recenter).setVisibility(View.INVISIBLE);
+                sLat = getIntent().getExtras().getDouble("source_latitude");
+                sLng = getIntent().getExtras().getDouble("source_longitude");
+                dLat = getIntent().getExtras().getDouble("destination_latitude");
+                dLng = getIntent().getExtras().getDouble("destination_longitude");
+                Log.e("Destination",dLat+" "+dLng);
+                drawMarker(new LatLng(sLat,sLng));
+                drawMarker(new LatLng(dLat,dLng));
+                String url1 =
+                        "https://maps.googleapis.com/maps/api/directions/json?origin="
+                                + sLat + "," + sLng + "&destination="
+                                + dLat + "," + dLng + "&sensor=false&key=AIzaSyAw-6HfE34y-PeMhTZz44YutxkxwQReqno";
+                makeLoacation(url1);
+                break;
+            case 102:
+                latitude = getIntent().getExtras().getDouble("lat");
+                longitude = getIntent().getExtras().getDouble("lng");
+                drawMarker(new LatLng(latitude,longitude));
+                mToolbar.setTitle("Search");
+                break;
         }
 
     }

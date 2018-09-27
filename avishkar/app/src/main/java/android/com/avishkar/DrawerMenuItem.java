@@ -2,10 +2,12 @@ package android.com.avishkar;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.view.GravityCompat;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.support.v4.widget.DrawerLayout;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
@@ -36,12 +38,14 @@ public class DrawerMenuItem {
     private int mMenuPosition;
     private Context mContext;
     private DrawerCallBack mCallBack;
-
     @View(R.id.itemNameTxt)
     private TextView itemNameTxt;
 
     @View(R.id.itemIcon)
     private ImageView itemIcon;
+
+    @View(R.id.drawerLayout)
+    private DrawerLayout drawer;
 
     private String memail;
     private String mcity;
@@ -62,30 +66,30 @@ public class DrawerMenuItem {
         switch (mMenuPosition) {
             case DRAWER_MENU_ITEM_PROFILE:
                 itemNameTxt.setText("Profile");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_email_black_24dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_account_box_black_24dp));
                 break;
             case DRAWER_MENU_ITEM_HOME:
                 itemNameTxt.setText("My Trips");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_add_black_24dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_home_black_24dp));
                 break;
             case DRAWER_MENU_ITEM_TOURISTS:
                 itemNameTxt.setText("Tourist Places");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_edit_black_24dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_tourist_24dp));
                 break;
             case DRAWER_MENU_ITEM_TRANSPORTS:
                 itemNameTxt.setText("Transport");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_email_black_24dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_directions_bus_black_24dp));
                 break;
             case DRAWER_MENU_ITEM_ETERIES:
                 itemNameTxt.setText("Eteries");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_email_black_24dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_restaurant_24dp));
                 break;
             case DRAWER_MENU_ITEM_AIDS:
                 itemNameTxt.setText("Aids");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_add_black_24dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_local_hospital_black_24dp));
                 break;
             case DRAWER_MENU_ITEM_LOGOUT:
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_email_black_24dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_input_black_24dp));
                 itemNameTxt.setText("Logout");
                 break;
 
@@ -98,6 +102,7 @@ public class DrawerMenuItem {
             case DRAWER_MENU_ITEM_PROFILE:
                 Intent profileIntent = new Intent(mContext, Profile.class);
                 profileIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                profileIntent.putExtra("email",mcity);
                 mContext.startActivity(profileIntent);
                 if (mCallBack != null) mCallBack.onProfileMenuSelected();
                 break;
@@ -148,12 +153,17 @@ public class DrawerMenuItem {
                 if (mCallBack != null) mCallBack.onNotificationsMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_LOGOUT:
-                Toast.makeText(mContext, "Logout", Toast.LENGTH_SHORT).show();
+                FirebaseAuth.getInstance().signOut();
+                Intent intent1 = new Intent(mContext,Main2Activity.class);
+                mContext.startActivity(intent1);
+                System.exit(0);
                 if (mCallBack != null) mCallBack.onSettingsMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_HOME:
-                Toast.makeText(mContext, "My Trips", Toast.LENGTH_SHORT).show();
-
+                Intent intent4 = new Intent(mContext,Dashboard.class);
+                intent4.putExtra("email",mcity);
+                intent4.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mContext.startActivity(intent4);
                 if (mCallBack != null) mCallBack.onSettingsMenuSelected();
                 break;
 

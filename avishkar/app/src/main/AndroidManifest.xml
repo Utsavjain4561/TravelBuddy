@@ -68,17 +68,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".Dashboard" />
-        <activity android:name=".Main2Activity" />
+        <activity android:name=".Main2Activity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".PresentTrip" />
         <activity android:name=".Profile" />
         <activity android:name=".Home" />
         <activity android:name=".Features" />
         <activity android:name=".ItineraryActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

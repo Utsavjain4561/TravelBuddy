@@ -33,10 +33,10 @@ public class Trips {
         this.dLat = dLat;
         this.dLng = dLng;
     }
-   public  double getsLat(){return  sLat;}
+    public  double getsLat(){return  sLat;}
     public  double getsLng(){return  sLng;}
     public  double getdLat(){return  dLat;}
-    public  double getdLng(){return  sLng;}
+    public  double getdLng(){return  dLng;}
     public String getSource(){
         return source;
     }

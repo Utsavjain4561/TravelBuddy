@@ -6,6 +6,8 @@ public class UserLogin {
     public int present;
     public int past;
     public int future;
+    public String name;
+    public String uri;
     UserLogin()
     {
 
@@ -17,5 +19,7 @@ public class UserLogin {
         this.present=present;
         this.email=email;
         this.mob=mob;
+        this.name="Avatar";
+        this.uri="";
     }
 }

@@ -28,10 +28,10 @@ public class Splash extends AwesomeSplash {
         configSplash.setAnimLogoSplashDuration(3000);
         configSplash.setAnimLogoSplashTechnique(Techniques.Bounce);
 
-        configSplash.setTitleSplash("Fly with wings");
+        configSplash.setTitleSplash("");
         configSplash.setTitleTextColor(R.color.colorAccentTrans);
-        configSplash.setTitleTextSize(30f);
-        configSplash.setAnimTitleDuration(1000);
+        configSplash.setTitleTextSize(0f);
+        configSplash.setAnimTitleDuration(0);
         configSplash.setAnimTitleTechnique(Techniques.Flash);
     }
 

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="android.com.avishkar.Home"
     android:id="@+id/drawerLayout"
+
     >
 <ScrollView
     android:layout_width="match_parent"
@@ -29,7 +30,6 @@
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="350dp"
-
             tools:context=".Home"/>
 
 

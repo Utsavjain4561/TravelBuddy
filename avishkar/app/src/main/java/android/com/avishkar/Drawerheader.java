@@ -21,11 +21,7 @@ import com.mindorks.placeholderview.annotations.View;
 @NonReusable
 @Layout(R.layout.drawer_header)
 public class Drawerheader {
-    @View(R.id.profileImageView)
-    private ImageView profileImage;
 
-    @View(R.id.nameTxt)
-    private TextView nameTxt;
 
 
 

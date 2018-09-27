@@ -6,9 +6,8 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Lat" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afce5f19-9d90-484b-b4ac-fd5c36ca2577" name="Default" comment="" />
@@ -33,28 +32,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SaveTrip.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/SaveTrip.java">
+      <file leaf-file-name="Home.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="122" column="13" lean-forward="false" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+            <state relative-caret-position="304">
+              <caret line="417" column="9" lean-forward="false" selection-start-line="417" selection-start-column="9" selection-end-line="417" selection-end-column="9" />
               <folding>
-                <element signature="e#3527#4124#0" expanded="true" />
-                <element signature="e#4123#4124#0" expanded="true" />
-                <element signature="e#4167#4770#0" expanded="true" />
-                <element signature="e#4769#4770#0" expanded="true" />
-                <element signature="e#4809#6697#0" expanded="true" />
-                <element signature="e#6696#6697#0" expanded="true" />
+                <element signature="method#getdetails#0;class#Home#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list_item.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item.xml">
+      <file leaf-file-name="Main2Activity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Main2Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="112" column="17" lean-forward="false" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
+            <state relative-caret-position="310">
+              <caret line="170" column="17" lean-forward="false" selection-start-line="170" selection-start-column="17" selection-end-line="170" selection-end-column="17" />
+              <folding>
+                <element signature="e#6517#7958#0" expanded="true" />
+                <element signature="e#7957#7958#0" expanded="true" />
+                <element signature="e#7998#10391#0" expanded="true" />
+                <element signature="e#10390#10391#0" expanded="true" />
+                <element signature="e#10559#10712#0" expanded="true" />
+                <element signature="e#10711#10712#0" expanded="true" />
+                <element signature="e#10758#10911#0" expanded="true" />
+                <element signature="e#10910#10911#0" expanded="true" />
+                <element signature="e#15738#15955#0" expanded="true" />
+                <element signature="e#15954#15955#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyMapLocation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyMapLocation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="416" column="69" lean-forward="false" selection-start-line="416" selection-start-column="69" selection-end-line="416" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="76" column="52" lean-forward="false" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_profile.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="60" column="42" lean-forward="false" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -63,43 +101,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpcommingFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/UpcommingFragment.java">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+            <state relative-caret-position="121">
+              <caret line="52" column="64" lean-forward="false" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Profile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Profile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="85" column="16" lean-forward="false" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
               <folding>
-                <element signature="e#2388#5262#0" expanded="true" />
-                <element signature="e#2852#4452#0" expanded="true" />
-                <element signature="e#4451#4452#0" expanded="true" />
-                <element signature="e#4481#5101#0" expanded="true" />
-                <element signature="e#5100#5101#0" expanded="true" />
-                <element signature="e#5261#5262#0" expanded="true" />
-                <element signature="e#5303#5524#0" expanded="true" />
-                <element signature="e#5523#5524#0" expanded="true" />
+                <element signature="e#3386#4399#0" expanded="true" />
+                <element signature="e#4398#4399#0" expanded="true" />
+                <element signature="e#5612#6076#0" expanded="true" />
+                <element signature="e#6075#6076#0" expanded="true" />
+                <element signature="e#6120#6395#0" expanded="true" />
+                <element signature="e#6394#6395#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="save_trip.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/save_trip.xml">
+      <file leaf-file-name="UserLogin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/UserLogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/CardAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="374">
+              <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -108,62 +141,29 @@
       <file leaf-file-name="PresentTrip.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/PresentTrip.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-730">
-              <caret line="42" column="30" lean-forward="false" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DaysAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DaysAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-188">
-              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_present_trip.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_present_trip.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+            <state relative-caret-position="421">
+              <caret line="154" column="44" lean-forward="false" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
               <folding>
-                <element signature="e#6165#6685#0" expanded="false" />
-                <element signature="e#6690#7709#0" expanded="false" />
+                <element signature="e#3301#3642#0" expanded="true" />
+                <element signature="e#3641#3642#0" expanded="true" />
+                <element signature="e#3864#4213#0" expanded="true" />
+                <element signature="e#4212#4213#0" expanded="true" />
+                <element signature="e#4419#5610#0" expanded="true" />
+                <element signature="e#5609#5610#0" expanded="true" />
+                <element signature="e#5774#7008#0" expanded="true" />
+                <element signature="e#7007#7008#0" expanded="true" />
               </folding>
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="card_item.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_item.xml">
+      <file leaf-file-name="DrawerMenuItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DrawerMenuItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="503">
+              <caret line="104" column="54" lean-forward="false" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="days_item.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/days_item.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-908">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
@@ -173,6 +173,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -180,7 +181,11 @@
     <findStrings>
       <find>result</find>
       <find>dlat</find>
-      <find>dlat</find>
+      <find>finish</find>
+      <find>fini</find>
+      <find>addTo</find>
+      <find>feature</find>
+      <find>onmarkerclick</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -2073,33 +2078,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_present_trip.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/PresentTrip.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Features.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/my_map_location.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_gps_fixed_black_24dp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_navigation_black_24dp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/save_trip.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_signin.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_signup.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Splash.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/map_info.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/drawer_header.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_cloud_queue_black_24dp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Drawerheader.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_tourist_24dp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_directions_bus_black_24dp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_restaurant_24dp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_local_hospital_black_24dp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_account_box_black_24dp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_home_black_24dp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_input_black_24dp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_signin.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DownloadUrl.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/WeatherService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/GetNearbyPlacesData.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DataParser.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/my_map_location.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyMapLocation.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DrawerMenuItem.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Dashboard.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Main2Activity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Home.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_gps_fixed_black_24dp.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/toolbar_home.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_navigation_black_24dp.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/TripsAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_forward_black_24dp.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Trips.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/UpcommingFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/save_trip.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/TripsAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/SaveTrip.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Home.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyTripFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/UpcommingFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/customshape.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/trip_list_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/upcomming_fragment.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/trip_fragment.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_gallery.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Dashboard.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_present_trip.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/TripListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/PresentTrip.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DrawerMenuItem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyMapLocation.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/UserLogin.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Profile.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Main2Activity.java" />
       </list>
     </option>
   </component>
@@ -2125,8 +2154,45 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="avishkar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avishkar" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="avishkar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avishkar" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="avishkar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avishkar" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avishkar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avishkar" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avishkar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avishkar" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2147,35 +2213,29 @@
             </path>
             <path>
               <item name="avishkar" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="avishkar" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="avishkar" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="sync.plugin.last.upgrade.timestamp" value="1537816574609" />
-    <property name="device.picker.selection" value="4a37d4280903" />
+    <property name="sync.plugin.last.upgrade.timestamp" value="1538040624825" />
+    <property name="device.picker.selection" value="33a8cdf30404" />
     <property name="android.profiler.active" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\win\Desktop\TravelBuddy-MidEvaluation\TravelBuddy-MidEvaluation\Documents\TravelBuddy-midEvaluation\TravelBuddy-branch1\avishkar\app\src\main\res\layout" />
+      <recent name="C:\Users\win\Desktop\TravelBuddy-MidEvaluation\TravelBuddy-MidEvaluation\Documents\TravelBuddy-midEvaluation\TravelBuddy-branch1\avishkar\app\src\main\res\drawable" />
+      <recent name="C:\Users\win\Desktop\TravelBuddy-MidEvaluation\TravelBuddy-MidEvaluation\Documents\TravelBuddy-midEvaluation\TravelBuddy-branch1\avishkar\app\src\main\res" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2362,27 +2422,27 @@
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="619" y="256" width="127" height="216" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Assistant" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34017095" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3982906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3982906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="101" y="101" width="1164" height="526" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24810892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24508321" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -2392,6 +2452,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2402,48 +2463,60 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/WeatherService.java</url>
-          <line>243</line>
+          <line>263</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Home.java</url>
-          <line>382</line>
+          <line>411</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyMapLocation.java</url>
-          <line>215</line>
+          <line>228</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Home.java</url>
-          <line>168</line>
+          <line>198</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Home.java</url>
-          <line>171</line>
+          <line>201</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyMapLocation.java</url>
-          <line>326</line>
+          <line>338</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyMapLocation.java</url>
-          <line>204</line>
+          <line>217</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyTripFragment.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyTripFragment.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyMapLocation.java</url>
-          <line>227</line>
+          <line>240</line>
           <properties class="android.com.avishkar.MyMapLocation" method="makeLoacation">
             <option name="EMULATED" value="true" />
           </properties>
@@ -2451,7 +2524,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyMapLocation.java</url>
-          <line>256</line>
+          <line>269</line>
           <properties class="android.com.avishkar.MyMapLocation" method="makePolyLine">
             <option name="EMULATED" value="true" />
           </properties>
@@ -2459,7 +2532,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyMapLocation.java</url>
-          <line>189</line>
+          <line>202</line>
           <properties class="android.com.avishkar.MyMapLocation" method="drawMarker">
             <option name="EMULATED" value="true" />
           </properties>
@@ -2467,121 +2540,107 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Home.java</url>
-          <line>197</line>
+          <line>225</line>
           <properties field="locationListenerGPS" class="android.com.avishkar.Home" />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="21" />
+      <option name="time" value="26" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/WeatherService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Travel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3740">
-          <caret line="240" column="32" lean-forward="false" selection-start-line="240" selection-start-column="32" selection-end-line="240" selection-end-column="32" />
+        <state relative-caret-position="136">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Home.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Tours.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="182" column="6" lean-forward="false" selection-start-line="182" selection-start-column="6" selection-end-line="182" selection-end-column="6" />
-          <folding>
-            <element signature="e#6155#6180#0" expanded="false" />
-            <element signature="method#getdetails#0;class#Home#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DataParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Temp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Splash.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+        <state relative-caret-position="68">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/mMessageReciever.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MapsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="69" column="13" lean-forward="false" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MapInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/ItineraryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/GetNearbyPlacesData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Features.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="161" column="26" lean-forward="false" selection-start-line="161" selection-start-column="26" selection-end-line="161" selection-end-column="26" />
+        <state relative-caret-position="407">
+          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/CardAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1004">
-          <caret line="100" column="48" lean-forward="false" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_signin.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="12" lean-forward="false" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_signup.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Splash.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="21" column="87" lean-forward="true" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/CurrentTour.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
+        <state relative-caret-position="136">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
@@ -2595,6 +2654,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DataParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Days.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -2603,419 +2670,328 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/WeatherService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DaysAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3740">
-          <caret line="240" column="32" lean-forward="false" selection-start-line="240" selection-start-column="32" selection-end-line="240" selection-end-column="32" />
+        <state relative-caret-position="136">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-26/android.jar!/android/app/Activity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="600" column="0" lean-forward="false" selection-start-line="600" selection-start-column="0" selection-end-line="600" selection-end-column="0" />
-          <folding>
-            <marker date="1522722695707" expanded="false" signature="3:117" ph="/.../" />
-            <marker date="1522722695707" expanded="true" signature="900:923" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="971:994" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1056:1079" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1139:1162" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1199:1222" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1274:1297" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1356:1379" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1424:1447" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1505:1528" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1577:1600" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1668:1691" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1802:1825" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1907:1930" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2055:2078" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2150:2173" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2288:2311" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2342:2365" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2398:2421" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2457:2480" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2512:2535" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2571:2594" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2636:2659" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2705:2728" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2790:2813" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2869:2892" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2971:2994" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3045:3068" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3119:3142" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3188:3211" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3275:3298" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3367:3390" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3505:3528" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3559:3582" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3621:3644" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3750:3773" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3831:3854" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3916:3939" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4025:4048" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4103:4126" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4183:4206" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4346:4369" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4425:4448" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4478:4501" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4534:4557" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4594:4617" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4734:4757" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4763:4793" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="4890:4913" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4956:4979" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5106:5129" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5135:5165" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="5272:5295" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5343:5366" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5372:5402" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="5473:5496" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5586:5609" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5696:5719" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5771:5794" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5880:5903" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5948:5971" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6035:6058" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6123:6146" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6178:6201" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6243:6266" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6328:6351" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6417:6440" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6446:6476" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="6699:6722" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6728:6758" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="6848:6871" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6877:6907" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="6996:7019" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7085:7108" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7158:7181" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7244:7267" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7317:7340" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7397:7420" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7521:7544" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7645:7668" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7748:7771" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7858:7881" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7937:7960" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8018:8041" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8093:8116" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8189:8212" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8290:8313" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8384:8407" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8501:8524" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8558:8581" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8658:8681" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8747:8770" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8840:8863" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8937:8960" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8998:9021" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="9113:9136" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="9173:9196" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="9253:9276" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="9315:9338" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="9379:9402" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="9440:9463" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="9530:9553" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="9628:9651" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="9720:9743" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="9816:9839" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="9916:9939" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="10048:10071" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="10135:10158" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="10236:10259" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="10358:10381" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="10454:10477" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="10560:10583" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="10654:10677" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="10719:10742" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="10807:10830" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="10896:10919" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="10990:11013" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="11049:11072" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="11143:11166" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="11250:11273" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="11358:11381" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="11443:11466" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="11502:11525" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="11562:11585" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="11726:11749" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="11814:11837" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="11904:11927" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="11985:12008" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="12045:12068" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="12139:12162" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="12224:12247" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="12253:12283" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="12366:12389" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="12395:12425" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="12532:12555" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="12561:12591" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="12688:12711" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="12717:12747" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="12868:12891" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="12897:12927" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="12995:13018" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="13024:13054" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="13149:13172" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="13178:13208" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="13279:13302" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="13308:13338" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="13408:13431" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="13508:13531" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="13572:13595" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="13656:13679" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="13823:13846" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="13935:13958" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="14003:14026" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="14089:14112" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="14189:14212" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="14294:14317" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="14420:14443" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="14517:14540" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="14601:14624" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="14681:14704" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="14742:14765" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="14876:14899" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="14991:15014" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="15128:15151" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="15238:15261" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="15350:15373" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="15489:15512" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="15563:15586" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="15826:15849" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="16116:16139" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="16202:16225" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="16315:16338" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="16406:16429" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="16524:16547" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="16761:16784" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="17025:17048" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="17139:17162" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="17280:17303" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="17381:17404" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="17509:17532" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="17649:17672" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="17816:17839" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="17962:17985" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="18135:18158" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="18426:18449" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="18744:18767" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="18840:18863" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="18913:18936" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19015:19038" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19081:19104" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19153:19176" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19226:19249" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19313:19336" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19382:19405" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19440:19463" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19498:19521" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19569:19592" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19621:19644" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19671:19694" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19729:19752" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19814:19837" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19879:19902" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="19952:19975" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="20062:20085" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="20125:20148" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="20187:20210" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="20310:20333" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="20414:20437" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="20553:20576" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="20644:20667" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="20710:20733" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="20762:20785" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="20819:20842" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="20895:20918" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="20968:20991" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="21053:21076" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="21148:21171" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="21241:21264" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="21321:21344" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="21384:21407" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="21413:21443" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="21515:21538" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="21591:21614" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="21653:21676" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="21753:21776" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="21883:21906" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="22004:22027" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="22033:22063" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="22154:22177" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="22183:22213" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="22317:22340" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="22346:22376" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="22476:22499" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="22505:22535" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="22610:22633" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="22639:22669" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="22762:22785" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="22848:22871" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="22919:22942" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="23035:23058" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="23136:23159" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="23224:23247" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="23380:23403" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="23562:23585" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="23713:23736" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="23771:23794" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="23800:23830" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="23914:23937" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="23943:23973" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="24042:24065" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="24110:24133" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="24175:24198" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="24363:24386" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="24482:24505" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="24611:24634" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="24741:24764" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="24881:24904" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="24972:24995" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="25064:25087" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="25166:25189" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="25256:25279" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="25383:25406" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="25468:25491" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="25583:25606" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="25697:25720" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="25764:25787" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="25837:25860" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="25969:25992" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="26026:26049" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="26082:26105" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="26151:26174" ph="{}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DownloadUrl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-26/android.jar!/android/view/View.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="236" column="35" lean-forward="false" selection-start-line="236" selection-start-column="35" selection-end-line="236" selection-end-column="35" />
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MapsActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Drawerheader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-402">
-          <caret line="121" column="37" lean-forward="false" selection-start-line="117" selection-start-column="7" selection-end-line="121" selection-end-column="37" />
+        <state relative-caret-position="136">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-26/android.jar!/android/app/Instrumentation.class">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/my_map_location.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="96" column="238" lean-forward="false" selection-start-line="96" selection-start-column="238" selection-end-line="96" selection-end-column="238" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/TripsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="105" column="48" lean-forward="false" selection-start-line="105" selection-start-column="48" selection-end-line="105" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/ViewPagerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/SaveTrip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="158" column="23" lean-forward="false" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
           <folding>
-            <marker date="1522722695707" expanded="false" signature="3:117" ph="/.../" />
-            <marker date="1522722695707" expanded="true" signature="350:373" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="429:452" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="478:501" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="529:552" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="630:653" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="725:748" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="804:827" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="895:918" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="971:994" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1039:1062" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1105:1128" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1158:1181" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1231:1254" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1316:1339" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1395:1418" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1465:1488" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1523:1546" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1581:1604" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1638:1661" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1711:1734" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1794:1817" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1853:1876" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="1935:1958" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2041:2064" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2146:2169" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2340:2363" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2519:2542" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2645:2668" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2770:2793" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="2920:2943" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3028:3051" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3148:3171" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3271:3294" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3350:3373" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3432:3455" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3500:3523" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3572:3595" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3661:3684" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="3757:3780" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4027:4050" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4276:4299" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4370:4393" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="4831:4854" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5093:5116" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5212:5235" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5377:5400" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5471:5494" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5616:5639" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5807:5830" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="5930:5953" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6099:6122" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6226:6249" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6318:6341" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6412:6435" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6505:6528" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6596:6619" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6728:6751" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="6909:6932" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7001:7024" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7099:7122" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7128:7158" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="7222:7245" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7251:7281" ph="/**...*/" />
-            <marker date="1522722695707" expanded="true" signature="7344:7367" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7415:7438" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7487:7510" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7566:7589" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7654:7677" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7766:7789" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7836:8087" ph="{...}" />
-            <marker date="1522722695707" expanded="true" signature="7919:7942" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="7979:8002" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8058:8081" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8129:9218" ph="{...}" />
-            <marker date="1522722695707" expanded="true" signature="8264:8287" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8408:8431" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8466:8489" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8553:8576" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8654:8677" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8721:8744" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8781:8804" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8866:8889" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="8951:8974" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="9059:9082" ph="{}" />
-            <marker date="1522722695707" expanded="true" signature="9189:9212" ph="{}" />
+            <element signature="e#5164#7295#0" expanded="false" />
+            <element signature="e#7294#7295#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/cell_content_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/map_info.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-551">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/customshape.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/trip_list_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyTripFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/UpcommingFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="e#5493#5714#0" expanded="false" />
+            <element signature="e#5713#5714#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/upcomming_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="29" column="43" lean-forward="false" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/trip_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="42" column="42" lean-forward="false" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/drawer_header.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_gallery.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Dashboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_subdirectory_arrow_right_black_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_present_trip.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="202" column="47" lean-forward="false" selection-start-line="202" selection-start-column="47" selection-end-line="202" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/TripListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="113" column="90" lean-forward="false" selection-start-line="113" selection-start-column="90" selection-end-line="113" selection-end-column="90" />
+          <folding>
+            <element signature="e#3996#4403#0" expanded="false" />
+            <element signature="e#4402#4403#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/PresentTrip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="154" column="44" lean-forward="false" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
+          <folding>
+            <element signature="e#3301#3642#0" expanded="true" />
+            <element signature="e#3641#3642#0" expanded="true" />
+            <element signature="e#3864#4213#0" expanded="true" />
+            <element signature="e#4212#4213#0" expanded="true" />
+            <element signature="e#4419#5610#0" expanded="true" />
+            <element signature="e#5609#5610#0" expanded="true" />
+            <element signature="e#5774#7008#0" expanded="true" />
+            <element signature="e#7007#7008#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DrawerMenuItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="104" column="54" lean-forward="false" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="60" column="42" lean-forward="false" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="52" column="64" lean-forward="false" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="417" column="9" lean-forward="false" selection-start-line="417" selection-start-column="9" selection-end-line="417" selection-end-column="9" />
+          <folding>
+            <element signature="method#getdetails#0;class#Home#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyMapLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="416" column="69" lean-forward="false" selection-start-line="416" selection-start-column="69" selection-end-line="416" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        <state relative-caret-position="190">
+          <caret line="76" column="52" lean-forward="false" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -3023,299 +2999,46 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/GetNearbyPlacesData.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/UserLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        <state relative-caret-position="374">
+          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DataParser.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Profile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/my_map_location.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DrawerMenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="150" column="78" lean-forward="false" selection-start-line="150" selection-start-column="78" selection-end-line="150" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Dashboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="428">
+          <caret line="85" column="16" lean-forward="false" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
+          <folding>
+            <element signature="e#3386#4399#0" expanded="true" />
+            <element signature="e#4398#4399#0" expanded="true" />
+            <element signature="e#5612#6076#0" expanded="true" />
+            <element signature="e#6075#6076#0" expanded="true" />
+            <element signature="e#6120#6395#0" expanded="true" />
+            <element signature="e#6394#6395#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Main2Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="284" column="23" lean-forward="false" selection-start-line="284" selection-start-column="23" selection-end-line="284" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/drawer_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MapInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/map_info.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="69" column="43" lean-forward="false" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_search_black_24dp.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_gps_fixed_black_24dp.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/toolbar_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_navigation_black_24dp.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyMapLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="142" column="21" lean-forward="false" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1440">
-          <caret line="130" column="17" lean-forward="false" selection-start-line="123" selection-start-column="16" selection-end-line="130" selection-end-column="17" />
+        <state relative-caret-position="310">
+          <caret line="170" column="17" lean-forward="false" selection-start-line="170" selection-start-column="17" selection-end-line="170" selection-end-column="17" />
           <folding>
-            <element signature="e#6155#6180#0" expanded="false" />
-            <element signature="method#getdetails#0;class#Home#0" expanded="false" />
+            <element signature="e#6517#7958#0" expanded="true" />
+            <element signature="e#7957#7958#0" expanded="true" />
+            <element signature="e#7998#10391#0" expanded="true" />
+            <element signature="e#10390#10391#0" expanded="true" />
+            <element signature="e#10559#10712#0" expanded="true" />
+            <element signature="e#10711#10712#0" expanded="true" />
+            <element signature="e#10758#10911#0" expanded="true" />
+            <element signature="e#10910#10911#0" expanded="true" />
+            <element signature="e#15738#15955#0" expanded="true" />
+            <element signature="e#15954#15955#0" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/TripsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="41" column="49" lean-forward="false" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/Trips.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/MyTripFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
-          <folding>
-            <element signature="e#3619#4340#0" expanded="false" />
-            <element signature="e#4339#4340#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/CardAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_present_trip.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding>
-            <element signature="e#6165#6685#0" expanded="false" />
-            <element signature="e#6690#7709#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/days_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-908">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/PresentTrip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-730">
-          <caret line="42" column="30" lean-forward="false" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/DaysAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-188">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/UpcommingFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
-          <folding>
-            <element signature="e#2388#5262#0" expanded="true" />
-            <element signature="e#2852#4452#0" expanded="true" />
-            <element signature="e#4451#4452#0" expanded="true" />
-            <element signature="e#4481#5101#0" expanded="true" />
-            <element signature="e#5100#5101#0" expanded="true" />
-            <element signature="e#5261#5262#0" expanded="true" />
-            <element signature="e#5303#5524#0" expanded="true" />
-            <element signature="e#5523#5524#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/save_trip.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/android/com/avishkar/SaveTrip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="122" column="13" lean-forward="false" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
-          <folding>
-            <element signature="e#3527#4124#0" expanded="true" />
-            <element signature="e#4123#4124#0" expanded="true" />
-            <element signature="e#4167#4770#0" expanded="true" />
-            <element signature="e#4769#4770#0" expanded="true" />
-            <element signature="e#4809#6697#0" expanded="true" />
-            <element signature="e#6696#6697#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="112" column="17" lean-forward="false" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
   </component>
