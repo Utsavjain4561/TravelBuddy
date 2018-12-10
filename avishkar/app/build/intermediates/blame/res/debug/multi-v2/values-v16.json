@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\win\\Documents\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-MidEvaluation\\TravelBuddy-MidEvaluation\\Documents\\TravelBuddy-midEvaluation\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\res\\merged\\debug\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\57ee62162b8b5c13dd66164b3afb1f5c\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\b32ba96ca3f0d134109f568e074294e3\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a689c5ea45f69c576853a0a57699d88d\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\10dee40ceab22d66a648461fbae9144e\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-MidEvaluation\\TravelBuddy-MidEvaluation\\Documents\\TravelBuddy-midEvaluation\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\b32ba96ca3f0d134109f568e074294e3\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\10dee40ceab22d66a648461fbae9144e\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

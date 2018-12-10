@@ -1,10 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\win\\Documents\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
+            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-MidEvaluation\\TravelBuddy-MidEvaluation\\Documents\\TravelBuddy-midEvaluation\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a689c5ea45f69c576853a0a57699d88d\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\10dee40ceab22d66a648461fbae9144e\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\win\\Desktop\\TravelBuddy-MidEvaluation\\TravelBuddy-MidEvaluation\\Documents\\TravelBuddy-midEvaluation\\TravelBuddy-branch1\\avishkar\\app\\build\\intermediates\\res\\merged\\debug\\values-ldltr-v21\\values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\win\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\10dee40ceab22d66a648461fbae9144e\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

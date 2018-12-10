@@ -1,34 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:orientation="vertical"-->
-    <!--android:weightSum="2"-->
-    <!--tools:context=".map">-->
-
-    <!--<fragment-->
-        <!--android:id="@my_infotion"-->
-        <!--android:name="android.com.avishkar.MyLocation"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="1" />-->
-
-    <!--<fragment-->
-        <!--android:id="@+id/map"-->
-        <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="1"-->
-        <!--tools:context=".MapsActivity" />-->
-<!--</LinearLayout>-->
-
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/listbuddies"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="map">
@@ -55,23 +30,22 @@
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
-                app:layout_collapseMode="parallax"/>
+                app:layout_collapseMode="parallax" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-
                 android:background="@color/colorAccent"
-                android:fitsSystemWindows="true"/>
+                android:fitsSystemWindows="true" />
 
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/anim_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:background="@color/splash"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                 />
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
@@ -80,17 +54,19 @@
         android:id="@+id/scrollableview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/float_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:clickable="true"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/ic_local_airport_black_24dp"
         app:backgroundTint="#279AF1"
         app:fabSize="normal"
         app:layout_anchor="@+id/appbar"
-        app:layout_anchorGravity="bottom|right|end"/>
+        app:layout_anchorGravity="bottom|right|end" />
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -103,11 +79,11 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <fragment
-                android:id="@+id/map_info"
-                android:name="android.com.avishkar.MapInfo"
-                android:layout_width="match_parent"
-                android:layout_height="250dp" />
+            <!--<fragment-->
+            <!--android:id="@+id/map_info"-->
+            <!--android:name="android.com.avishkar.MapInfo"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="250dp" />-->
 
             <fragment
                 android:id="@+id/map"
@@ -116,27 +92,7 @@
                 android:layout_height="400dp"
                 tools:context=".MapsActivity" />
 
-            <!--<ProgressBar-->
-                <!--android:id="@+id/progress_circle"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_centerInParent="true"-->
-                <!--android:layout_gravity="center"/>-->
-
-            <!--<android.support.v7.widget.RecyclerView-->
-                <!--android:id="@+id/recycler_view"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent" />-->
-
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
 </android.support.design.widget.CoordinatorLayout>
-
-
-
-<!--<View-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="160dp"-->
-<!--android:layout_gravity="bottom"-->
-<!--android:background="#000000"/>-->
